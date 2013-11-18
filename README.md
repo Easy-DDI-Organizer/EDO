@@ -1,17 +1,14 @@
-Easy DDI Organizer
+#Easy DDI Organizer
 
 
 
-Introduction
+##Introduction
 
 
-How to build
-
-
-
-Licenses
+##How to build
 
 
 
+##Licenses
 
-===
+
