@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="EDO.Core.View.DateRangePicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:EDO.Core.View"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <Grid>
+        <DatePicker Height="24" HorizontalAlignment="Left" x:Name="fromDatePicker" VerticalAlignment="Top" Width="115" SelectedDate="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:DateRangePicker}}, Path=FromDate}"/>
+        <DatePicker Height="24" HorizontalAlignment="Left" Margin="151,0,0,0" x:Name="toDatePicker" VerticalAlignment="Top" Width="115"  SelectedDate="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:DateRangePicker}}, Path=ToDate}"/>
+        <CheckBox Content="~" Height="16" HorizontalAlignment="Left" Margin="121,4,0,0" x:Name="rangeCheckBox" VerticalAlignment="Top" Width="49"  Checked="rangeCheckBox_Checked" Unchecked="rangeCheckBox_Unchecked"/>
+    </Grid>
+</UserControl>

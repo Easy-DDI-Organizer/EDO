@@ -1,0 +1,89 @@
+﻿<view:FormView x:Class="EDO.GroupCategory.GroupForm.GroupFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:EDO.Core.View"  
+             mc:Ignorable="d" 
+             d:DesignHeight="314" d:DesignWidth="495">
+    <Grid>
+        <GroupBox Header="{Loc StudyRelation}" Style="{StaticResource GroupBoxStyle}">
+            <Grid>
+                <Grid.RowDefinitions>                    
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Style="{StaticResource GridRowStyle}" Text="{Loc StudyPoint}"></TextBlock>
+                <ComboBox Grid.Column="1" Width="300" Style="{StaticResource GridRowStyle}"
+                          ItemsSource="{Binding Times}"
+                          DisplayMemberPath="Info"
+                          SelectedValuePath="Code"
+                          SelectedValue="{Binding TimeCode}"
+                          >                    
+                </ComboBox>
+
+                <TextBlock Grid.Row="1" Style="{StaticResource GridRowStyle}" Text="{Loc Questionnaire}"></TextBlock>
+                <ComboBox  Grid.Row="1" Grid.Column="1" Width="300" Style="{StaticResource GridRowStyle}"
+                          ItemsSource="{Binding Instruments}"
+                          DisplayMemberPath="Info"
+                          SelectedValuePath="Code"
+                          SelectedValue="{Binding InstrumentCode}"
+                           >                    
+                </ComboBox>
+
+                <TextBlock Grid.Row="2" Style="{StaticResource GridRowStyle}" Text="{Loc TargetPerson}"></TextBlock>
+                <ComboBox  Grid.Row="2" Grid.Column="1" Width="300" Style="{StaticResource GridRowStyle}"
+                          ItemsSource="{Binding Panels}"
+                          DisplayMemberPath="Info"
+                          SelectedValuePath="Code"
+                          SelectedValue="{Binding PanelCode}"                           
+                           >                    
+                </ComboBox>
+
+                <TextBlock Grid.Row="3" Style="{StaticResource GridRowStyle}" Text="{Loc Geography}"></TextBlock>
+                <ComboBox  Grid.Row="3" Grid.Column="1" Width="300" Style="{StaticResource GridRowStyle}"
+                          ItemsSource="{Binding Geographies}"
+                          DisplayMemberPath="Info"
+                          SelectedValuePath="Code"
+                          SelectedValue="{Binding GeographyCode}"   
+                           >                    
+                </ComboBox>
+                
+                <TextBlock Grid.Row="4" Style="{StaticResource GridRowStyle}" Text="{Loc DataSet}"></TextBlock>
+                <ComboBox  Grid.Row="4" Grid.Column="1" Width="300" Style="{StaticResource GridRowStyle}"
+                          ItemsSource="{Binding DataSets}"
+                          DisplayMemberPath="Info"
+                          SelectedValuePath="Code"
+                          SelectedValue="{Binding DataSetCode}"                              
+                           >                    
+                </ComboBox>
+                
+                <TextBlock Grid.Row="5" Style="{StaticResource GridRowStyle}" Text="{Loc Language}"></TextBlock>
+                <ComboBox  Grid.Row="5" Grid.Column="1" Width="300" Style="{StaticResource GridRowStyle}"
+                          ItemsSource="{Binding Languages}"
+                          DisplayMemberPath="Info"
+                          SelectedValuePath="Code"
+                          SelectedValue="{Binding LanguageCode}"                                                         
+                           >                    
+                </ComboBox>
+
+                <TextBlock Grid.Row="6" Style="{StaticResource GridRowStyle}" Text="{Loc GroupPurpose}"></TextBlock>
+                <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource GridRowStyle}" Text="{Binding Purpose}" Tag="Undoable"></TextBox>
+
+                <TextBlock Grid.Row="7" Style="{StaticResource GridRowStyle}" Text="{Loc StudyInGroup}"></TextBlock>
+                <TextBox Grid.Row="7" Grid.Column="1" Style="{StaticResource GridRowStyle}" IsReadOnly="True" Text="{Binding IncludeStudyUnitNames, Mode=OneTime}"></TextBox>
+            </Grid>
+        </GroupBox>  
+    </Grid>
+</view:FormView>

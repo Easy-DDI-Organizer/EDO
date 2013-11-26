@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:view="clr-namespace:EDO.Core.View"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    >
+  <Style TargetType="{x:Type TextBlock}">
+    <Setter Property="TextElement.FontFamily" Value="メイリオ"/>    
+  </Style>
+    <!--
+  <Style TargetType="{x:Type TextBox}">
+    <Setter Property="TextBox.FontFamily" Value="メイリオ"/>
+  </Style>    
+    -->
+    <sys:Double x:Key="RibbonButtonMinWidth">62</sys:Double>
+    <sys:Double x:Key="RibbonButtonWidth">62</sys:Double>
+    <sys:Double x:Key="RibbonButtonLargeWidth">72</sys:Double>    
+</ResourceDictionary>

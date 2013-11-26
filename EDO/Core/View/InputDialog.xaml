@@ -1,0 +1,21 @@
+﻿<Window x:Class="EDO.Core.View.InputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="InputDialog"  Width="400" Height="Auto" SizeToContent="Height" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="textBox" Grid.Row="0" Grid.ColumnSpan="3" Margin="6"></TextBox>
+        <TextBlock Name="info" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="6" TextWrapping="Wrap"></TextBlock>
+        <Button Grid.Row="2" Grid.Column="1" Width="80" Margin="6" IsDefault="True" Click="okButton_Clicked">OK</Button>
+        <Button Grid.Row="2" Grid.Column="2" Width="80" Margin="6" IsCancel="True" Click="cancelButton_Clicked" Content="{Loc Cancel}"></Button>
+    </Grid>
+</Window>

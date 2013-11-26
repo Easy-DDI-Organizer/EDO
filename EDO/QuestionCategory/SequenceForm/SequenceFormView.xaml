@@ -1,0 +1,103 @@
+﻿<view:FormView x:Class="EDO.QuestionCategory.SequenceForm.SequenceFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:EDO.Core.View"   
+             xmlns:local="clr-namespace:EDO.QuestionCategory.SequenceForm"             
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate x:Key="controlConstructScheme">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Style="{StaticResource TextRowStyle}" Text="{Loc Key= SequenceName}"></TextBlock>
+                <TextBox  Grid.Column="1" Margin="0,4,0,0" Text="{Binding Title,ValidatesOnDataErrors=True}" HorizontalAlignment="Stretch" Tag="Undoable"/>
+                <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddQuestionCommand}" Content="{Loc Key= AddQuestion}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddQuestionGroupCommand}" Content="{Loc Key=AddQuestionGroup}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddSentenceCommand}" Content="{Loc Key= AddSentence}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddBranchCommand}" Content="{Loc Key= AddBranch}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding EditConstructCommand}" Content="{Loc Key= Edit}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding RemoveConstructCommand}" Content="{Loc Key= Delete}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding UpConstructCommand}" Content="{Loc Key= Up}"></Button>
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding DownConstructCommand}" Content="{Loc Key= Down}"></Button>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <Button Style="{StaticResource GridRowStyle}" Command="{Binding PreviewCommand}" Content="{Loc Key=Preview}"/>
+                    </StackPanel>
+                </Grid>
+                <!--
+                <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddQuestionCommand}" Content="{Loc Key= AddQuestion}"></Button>
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddSentenceCommand}" Content="{Loc Key= AddSentence}"></Button>
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding AddBranchCommand}" Content="{Loc Key= AddBranch}"></Button>
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding EditConstructCommand}" Content="{Loc Key= Edit}"></Button>
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding RemoveConstructCommand}" Content="{Loc Key= Delete}"></Button>
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding UpConstructCommand}" Content="{Loc Key= Up}"></Button>
+                    <Button Style="{StaticResource GridRowStyle}" Command="{Binding DownConstructCommand}" Content="{Loc Key= Down}"></Button>                
+                </StackPanel>
+                -->
+                <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Name="constructDataGrid" AutoGenerateColumns="False" 
+                  CanUserAddRows="False" 
+                  ItemsSource="{Binding Constructs}"
+                  SelectedItem="{Binding SelectedConstructItem}"
+                  IsSynchronizedWithCurrentItem="True"
+                  IsReadOnly="True"
+                  Margin="0,5,0,0"
+                  MouseDoubleClick="constructDataGrid_DoubleClicked"
+                  >
+                    <DataGrid.RowValidationRules>
+                        <view:RowDataInfoValidationRule ValidationStep="UpdatedValue"/>
+                    </DataGrid.RowValidationRules>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="{Loc Key= AddQuestion}" Command="{Binding AddQuestionCommand}"/>
+                            <MenuItem Header="{Loc Key= AddSentence}" Command="{Binding AddSentenceCommand}"/>
+                            <MenuItem Header="{Loc Key= AddBranch}" Command="{Binding AddBranchCommand}"/>
+                            <MenuItem Header="{Loc Key= Edit}" Command="{Binding EditConstructCommand}"/>
+                            <MenuItem Header="{Loc Key= Delete}" Command="{Binding RemoveConstructCommand}"/>
+                            <MenuItem Header="{Loc Key= Up}" Command="{Binding UpConstructCommand}" InputGestureText="PageUp"/>
+                            <MenuItem Header="{Loc Key= Down}" Command="{Binding DownConstructCommand}" InputGestureText="PageDown"/>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{Loc Key= Kind}" Width="100" Binding="{Binding TypeString}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{Loc Key= Number}" Width="100" Binding="{Binding No}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{Loc Key= QuestionAndSentence}" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <TabControl Name="tabControl" VerticalAlignment="Stretch"
+                    ItemsSource="{Binding ControlConstructSchemes}"
+                    IsSynchronizedWithCurrentItem="True" 
+                    Style="{StaticResource TabControlStyle}" 
+                    Template="{StaticResource TabControlTemplate}" 
+                    ContentTemplate="{StaticResource controlConstructScheme}"                    
+                    SelectedItem="{Binding SelectedControlConstructScheme}"
+                    >
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+        </TabControl>
+    </Grid>
+</view:FormView>

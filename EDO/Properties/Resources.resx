@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id='root' xmlns:msdata='urn:schemas-microsoft-com:xml-msdata' xmlns='' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+    <xsd:import namespace='http://www.w3.org/XML/1998/namespace'/>
+    <xsd:element msdata:IsDataSet='true' name='root'>
+      <xsd:complexType>
+        <xsd:choice maxOccurs='unbounded'>
+          <xsd:element name='metadata'>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs='0' name='value' type='xsd:string'/>
+              </xsd:sequence>
+              <xsd:attribute name='name' type='xsd:string' use='required'/>
+              <xsd:attribute name='type' type='xsd:string'/>
+              <xsd:attribute name='mimetype' type='xsd:string'/>
+              <xsd:attribute ref='xml:space'/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name='assembly'>
+            <xsd:complexType>
+              <xsd:attribute name='alias' type='xsd:string'/>
+              <xsd:attribute name='name' type='xsd:string'/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name='data'>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element msdata:Ordinal='1' minOccurs='0' name='value' type='xsd:string'/>
+                <xsd:element msdata:Ordinal='2' minOccurs='0' name='comment' type='xsd:string'/>
+              </xsd:sequence>
+              <xsd:attribute msdata:Ordinal='1' name='name' type='xsd:string' use='required'/>
+              <xsd:attribute msdata:Ordinal='3' name='type' type='xsd:string'/>
+              <xsd:attribute msdata:Ordinal='4' name='mimetype' type='xsd:string'/>
+              <xsd:attribute ref='xml:space'/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name='resheader'>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element msdata:Ordinal='1' minOccurs='0' name='value' type='xsd:string'/>
+              </xsd:sequence>
+              <xsd:attribute name='name' type='xsd:string' use='required'/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name='resmimetype'>
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name='version'>
+    <value>2.0</value>
+  </resheader>
+  <resheader name='reader'>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name='writer'>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <assembly alias='System.Windows.Forms' name='System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'/>
+  <data name='Options' type='System.Resources.ResXFileRef, System.Windows.Forms'>
+    <value>..\files\options.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+<data name='AboutEDO' xml:space='preserve'><value>EDOについて</value><comment>AboutWindow.xaml</comment></data><data name='StudyTitle' xml:space='preserve'><value>調査タイトル</value><comment>AbstractFormView.xaml</comment></data><data name='UndefinedValue' xml:space='preserve'><value>&lt;未入力&gt;</value><comment>BaseVM.cs</comment></data><data name='SelectQuestionOrSentence' xml:space='preserve'><value>質問または説明文を選択してください</value><comment>BranchVM.cs</comment></data><data name='InputCategorySchemeName' xml:space='preserve'><value>選択肢群の名前を入力してください</value><comment>CategoryFormVM.cs</comment></data><data name='UntitledCategoryScheme' xml:space='preserve'><value>無題の選択肢群</value><comment>CategorySchemeVM.cs</comment></data><data name='InputCodeSchemeName' xml:space='preserve'><value>コード群の名前を入力してください</value><comment>CodeFormVM.cs</comment></data><data name='CodeFormHelpMessage' xml:space='preserve'><value>※コード群作成後は、「選択肢群から追加」、「選択肢を追加」ボタンを押してコードを割り当ててください。</value><comment>CodeFormVM.cs</comment></data><data name='Label' xml:space='preserve'><value>ラベル</value><comment>CodeFormView.xaml</comment></data><data name='UntitledCodeScheme' xml:space='preserve'><value>無題のコード群</value><comment>CodeSchemeVM.cs</comment></data><data name='InputCode' xml:space='preserve'><value>コードを入力してください</value><comment>CodeVM.cs</comment></data><data name='InputLabel' xml:space='preserve'><value>ラベルを入力してください</value><comment>CodeVM.cs</comment></data><data name='Codebook' xml:space='preserve'><value>コードブック</value><comment>CodebookWriter.cs</comment></data><data name='Toc' xml:space='preserve'><value>目次</value><comment>CodebookWriter.cs</comment></data><data name='StudyAbstract' xml:space='preserve'><value>調査の概要</value><comment>CodebookWriter.cs</comment></data><data name='StudyMember' xml:space='preserve'><value>調査メンバー</value><comment>CodebookWriter.cs</comment></data><data name='StudyPurpose' xml:space='preserve'><value>調査目的</value><comment>CodebookWriter.cs</comment></data><data name='StudyFund' xml:space='preserve'><value>研究資金</value><comment>CodebookWriter.cs</comment></data><data name='CollectionMethodOfData' xml:space='preserve'><value>データの収集方法</value><comment>CodebookWriter.cs</comment></data><data name='Universe' xml:space='preserve'><value>母集団</value><comment>CodebookWriter.cs</comment></data><data name='SamplingMethod' xml:space='preserve'><value>サンプリング方法</value><comment>CodebookWriter.cs</comment></data><data name='CollectionPeriod' xml:space='preserve'><value>データ収集期間</value><comment>CodebookWriter.cs</comment></data><data name='CollectionMethod' xml:space='preserve'><value>データ収集方法</value><comment>CodebookWriter.cs</comment></data><data name='VariableSummary' xml:space='preserve'><value>変数の概要</value><comment>CodebookWriter.cs</comment></data><data name='SubjectNumber' xml:space='preserve'><value>課題番号</value><comment>CodebookWriter.cs</comment></data><data name='CorrespondingQuestionSentence' xml:space='preserve'><value>対応する質問文</value><comment>CodebookWriter.cs</comment></data><data name='CodeCategory' xml:space='preserve'><value>コード	選択肢</value><comment>CodebookWriter.cs</comment></data><data name='QuestionForMeasure' xml:space='preserve'><value>{0}を測定するために使う質問項目</value><comment>ConceptConverter.cs</comment></data><data name='MajorDivision' xml:space='preserve'><value>大分類</value><comment>ConceptFormVM.cs</comment></data><data name='ConceptFormHelpMessage1' xml:space='preserve'><value>ここでは調査で把握したい概念、現象などのおおまかな分類をします
+例:健康、社会経済状況</value><comment>ConceptFormView.xaml</comment></data><data name='ConceptFormHelpMessage2' xml:space='preserve'><value>ここでは調査で把握したい単一の概念、現象などを記述します。 
+例:精神的健康、身体的健康、収入、職業</value><comment>ConceptFormView.xaml</comment></data><data name='Content' xml:space='preserve'><value>内容</value><comment>ConceptFormView.xaml</comment></data><data name='MajorDivisionDisplayName' xml:space='preserve'><value>大分類の表示名</value><comment>ConceptFormView.xaml</comment></data><data name='VariableImageInMajorDivision' xml:space='preserve'><value>大分類に含まれる変数イメージ</value><comment>ConceptFormView.xaml</comment></data><data name='InputQuestionNumber' xml:space='preserve'><value>質問番号を選択してください</value><comment>CondVM.cs</comment></data><data name='InputValue' xml:space='preserve'><value>値を入力してください</value><comment>CondVM.cs</comment></data><data name='UndoBufferCount' xml:space='preserve'><value>アンドゥバッファの数</value><comment>ConfigWindow.xaml</comment></data><data name='UndoBufferCountLabel' xml:space='preserve'><value>(1～200)</value><comment>ConfigWindow.xaml</comment></data><data name='Settings' xml:space='preserve'><value>設定</value><comment>ConfigWindow.xaml</comment></data><data name='File' xml:space='preserve'><value>ファイル</value><comment>ConfigWindow.xaml</comment></data><data name='Etc' xml:space='preserve'><value>その他</value><comment>ConfigWindow.xaml</comment></data><data name='ReopenLastFile' xml:space='preserve'><value>最後に開いたファイルを開き直す</value><comment>ConfigWindow.xaml</comment></data><data name='LangHelpMessage' xml:space='preserve'><value>言語設定を反映するためには、再起動が必要です。</value><comment>ConfigWindow.xaml</comment></data><data name='Japanese' xml:space='preserve'><value>日本語</value><comment>ConfigWindowVM.cs</comment></data><data name='AlreadySelectedQuestion' xml:space='preserve'><value>選択済みの質問です</value><comment>ControlConstructSchemeVM.cs</comment></data><data name='SelectQuestion' xml:space='preserve'><value>質問の選択</value><comment>ControlConstructSchemeVM.cs</comment></data><data name='Edit' xml:space='preserve'><value>編集</value><comment>ControlConstructSchemeVM.cs</comment></data><data name='StudyTopic' xml:space='preserve'><value>調査のトピック</value><comment>CoverageFormView.xaml</comment></data><data name='StudyKeyword' xml:space='preserve'><value>調査のキーワード</value><comment>CoverageFormView.xaml</comment></data><data name='Keyword' xml:space='preserve'><value>キーワード</value><comment>CoverageFormView.xaml</comment></data><data name='CoveragePeriod' xml:space='preserve'><value>カバーする時期</value><comment>CoverageFormView.xaml</comment></data><data name='CoverageArea' xml:space='preserve'><value>カバーする地域のレベル</value><comment>CoverageFormView.xaml</comment></data><data name='DeleteCondition' xml:space='preserve'><value>条件を削除</value><comment>CreateBranchWindow.xaml</comment></data><data name='AddOrCondition' xml:space='preserve'><value>OR条件を追加</value><comment>CreateBranchWindow.xaml</comment></data><data name='UpConditionGroup' xml:space='preserve'><value>条件グループを上へ</value><comment>CreateBranchWindow.xaml</comment></data><data name='DownConditionGroup' xml:space='preserve'><value>条件グループを下へ</value><comment>CreateBranchWindow.xaml</comment></data><data name='AddAndOrConditionGroup' xml:space='preserve'><value>AND/OR条件グループを追加</value><comment>CreateBranchWindow.xaml</comment></data><data name='DeleteBranch' xml:space='preserve'><value>分岐を削除</value><comment>CreateBranchWindow.xaml</comment></data><data name='EditBranch' xml:space='preserve'><value>分岐を編集</value><comment>CreateBranchWindow.xaml</comment></data><data name='AppendBranch' xml:space='preserve'><value>分岐を追加</value><comment>CreateBranchWindow.xaml</comment></data><data name='BranchSetting' xml:space='preserve'><value>分岐設定</value><comment>CreateBranchWindow.xaml</comment></data><data name='ContentOfExplanation' xml:space='preserve'><value>説明の内容は?</value><comment>CreateSentenceWindow.xaml</comment></data><data name='FundMoneyValue' xml:space='preserve'><value>助成金額</value><comment>DDIIO.cs</comment></data><data name='FundTitle' xml:space='preserve'><value>助成タイトル</value><comment>DDIIO.cs</comment></data><data name='FundPeriod' xml:space='preserve'><value>助成期間</value><comment>DDIIO.cs</comment></data><data name='DDIValidationError' xml:space='preserve'><value>DDIファイルの検証に失敗しました</value><comment>DDIIO.cs</comment></data><data name='LineNumber' xml:space='preserve'><value>行番号</value><comment>DDIIO.cs</comment></data><data name='Position' xml:space='preserve'><value>位置</value><comment>DDIIO.cs</comment></data><data name='DDIGroupFilter' xml:space='preserve'><value>DDI3.1ファイル (*.xml)|*.xml</value><comment>DDISerializer.cs</comment></data><data name='DDIFileFilter' xml:space='preserve'><value>DDI3.1ファイル (*.xml)|*.xml|DDI2.5ファイル (*.xml)|*.xml</value><comment>DDISerializer.cs</comment></data><data name='StudyUnitExport' xml:space='preserve'><value>{0}のエクスポート</value><comment>DDISerializer.cs</comment></data><data name='GroupExport' xml:space='preserve'><value>グループのエクスポート</value><comment>DDISerializer.cs</comment></data><data name='InputOrganization' xml:space='preserve'><value>組織を入力してください</value><comment>DDIWriter.cs</comment></data><data name='InputUniverse' xml:space='preserve'><value>母集団を入力してください</value><comment>DDIWriter.cs</comment></data><data name='SelectNumberType' xml:space='preserve'><value>数値の型を選択してください</value><comment>DDIWriter.cs</comment></data><data name='InputMinAndMax' xml:space='preserve'><value>最大値・最小値を入力してください</value><comment>DDIWriter.cs</comment></data><data name='SelectDateType' xml:space='preserve'><value>日付の型を選択してください</value><comment>DDIWriter.cs</comment></data><data name='InputCollectionLeader' xml:space='preserve'><value>データ収集の責任者を入力してください</value><comment>DDIWriter.cs</comment></data><data name='InputCollectionDate' xml:space='preserve'><value>データの収集日・期間を入力してください</value><comment>DDIWriter.cs</comment></data><data name='GenerateForCmpareConcept' xml:space='preserve'><value>Concept比較のために生成</value><comment>DDIWriter.cs</comment></data><data name='GenerateForCmpareVariable' xml:space='preserve'><value>Variable比較のために生成</value><comment>DDIWriter.cs</comment></data><data name='CharacterEncoding' xml:space='preserve'><value>文字コード</value><comment>DataFileFormView.xaml</comment></data><data name='Format' xml:space='preserve'><value>フォーマット</value><comment>DataFileFormView.xaml</comment></data><data name='FileLocation' xml:space='preserve'><value>ファイルの場所</value><comment>DataFileFormView.xaml</comment></data><data name='FileStructure' xml:space='preserve'><value>ファイル構造</value><comment>DataFileFormView.xaml</comment></data><data name='SeparatorCharacter' xml:space='preserve'><value>区切り文字</value><comment>DataFileFormView.xaml</comment></data><data name='RecordLayout' xml:space='preserve'><value>レコードレイアウト</value><comment>DataFileFormView.xaml</comment></data><data name='Index' xml:space='preserve'><value>インデックス</value><comment>DataFileFormView.xaml</comment></data><data name='Save' xml:space='preserve'><value>保存</value><comment>DataFileFormView.xaml</comment></data><data name='ConfirmEditingRow' xml:space='preserve'><value>編集中の行を確定して下さい</value><comment>DataGridHelper.cs</comment></data><data name='InputDataSetName' xml:space='preserve'><value>データセットの名前を入力してください</value><comment>DataSetFormVM.cs</comment></data><data name='DisplayName' xml:space='preserve'><value>表示名</value><comment>DataSetFormView.xaml</comment></data><data name='Memo' xml:space='preserve'><value>メモ</value><comment>DataSetFormView.xaml</comment></data><data name='Delete' xml:space='preserve'><value>削除</value><comment>DataSetFormView.xaml</comment></data><data name='Up' xml:space='preserve'><value>上へ</value><comment>DataSetFormView.xaml</comment></data><data name='Down' xml:space='preserve'><value>下へ</value><comment>DataSetFormView.xaml</comment></data><data name='VariableName' xml:space='preserve'><value>変数名</value><comment>DataSetFormView.xaml</comment></data><data name='VariableLabel' xml:space='preserve'><value>変数ラベル</value><comment>DataSetFormView.xaml</comment></data><data name='Image' xml:space='preserve'><value>イメージ</value><comment>DataSetFormView.xaml</comment></data><data name='AddVariable' xml:space='preserve'><value>変数を追加</value><comment>DataSetFormView.xaml</comment></data><data name='DeleteVariable' xml:space='preserve'><value>変数を削除</value><comment>DataSetFormView.xaml</comment></data><data name='UntitledDataSet' xml:space='preserve'><value>無題のデータセット</value><comment>DataSetVM.cs</comment></data><data name='FromTo' xml:space='preserve'><value>～</value><comment>DateRange.cs</comment></data><data name='YearMonthDay' xml:space='preserve'><value>{0}年{1}月{2}日</value><comment>DateUnit.cs</comment></data><data name='YearMonth' xml:space='preserve'><value>{0}年{1}月</value><comment>DateUnit.cs</comment></data><data name='Year' xml:space='preserve'><value>年</value><comment>DateUnit.cs</comment></data><data name='HeaderStyle' xml:space='preserve'><value>ヘッダー (文字)</value><comment>DocxWriter.cs</comment></data><data name='FooterStyle' xml:space='preserve'><value>フッター (文字)</value><comment>DocxWriter.cs</comment></data><data name='Heading1' xml:space='preserve'><value>見出し 1 (文字)</value><comment>DocxWriter.cs</comment></data><data name='HeadingMap' xml:space='preserve'><value>見出しマップ (文字)</value><comment>DocxWriter.cs</comment></data><data name='Heading2' xml:space='preserve'><value>見出し 2 (文字)</value><comment>DocxWriter.cs</comment></data><data name='Font1' xml:space='preserve'><value>ＭＳ ゴシック</value><comment>DocxWriter.cs</comment></data><data name='TitleStyle' xml:space='preserve'><value>表題 (文字)</value><comment>DocxWriter.cs</comment></data><data name='WriteSuccess' xml:space='preserve'><value>書き出しに成功しました。表示しますか?</value><comment>DocxWriter.cs</comment></data><data name='WriteFinish' xml:space='preserve'><value>書き出し完了</value><comment>DocxWriter.cs</comment></data><data name='WriteError' xml:space='preserve'><value>書き出しに失敗しました。</value><comment>DocxWriter.cs</comment></data><data name='UnexpectedErrorOccurred' xml:space='preserve'><value>予期しないエラーが発生しました。</value><comment>EDOConstants.cs</comment></data><data name='All' xml:space='preserve'><value>全体</value><comment>EDOConstants.cs</comment></data><data name='EDOGroupFileFilter' xml:space='preserve'><value>EDOグループファイル (*.egr)|*.egr</value><comment>EDOSerializer.cs</comment></data><data name='EDOFileFilter' xml:space='preserve'><value>EDOファイル (*.edo)|*.edo</value><comment>EDOSerializer.cs</comment></data><data name='UsedFileNameAndInput' xml:space='preserve'><value>他の調査ファイルで使用済みのファイル名です。
+別のファイル名を指定して下さい。</value><comment>EDOSerializer.cs</comment></data><data name='PleaseSave' xml:space='preserve'><value>{0}を保存して下さい</value><comment>EDOSerializer.cs</comment></data><data name='UsedFileNameAndSkip' xml:space='preserve'><value>他の調査ファイルで使用済みのファイル名なのでスキップします</value><comment>EDOSerializer.cs</comment></data><data name='ErrorOccurred' xml:space='preserve'><value>エラーが発生しました</value><comment>EDOSerializer.cs</comment></data><data name='ReferenceDeleteError' xml:space='preserve'><value>{0}から参照されているため削除できません。</value><comment>EDOUtils.cs</comment></data><data name='StartBracket' xml:space='preserve'><value>「</value><comment>EDOUtils.cs</comment></data><data name='EndBracket' xml:space='preserve'><value>」</value><comment>EDOUtils.cs</comment></data><data name='Comma' xml:space='preserve'><value>、</value><comment>EDOUtils.cs</comment></data><data name='StudyUnit' xml:space='preserve'><value>調査単位</value><comment>ErrorDialog.xaml</comment></data><data name='Display' xml:space='preserve'><value>画面</value><comment>ErrorDialog.xaml</comment></data><data name='ErrorMessage' xml:space='preserve'><value>エラーメッセージ</value><comment>ErrorDialog.xaml</comment></data><data name='Date' xml:space='preserve'><value>日付</value><comment>EventFormView.xaml</comment></data><data name='FundOrganization' xml:space='preserve'><value>助成機関名</value><comment>FundingInfoFomView.xaml</comment></data><data name='FundNumber' xml:space='preserve'><value>助成番号</value><comment>FundingInfoFomView.xaml</comment></data><data name='FundMoney' xml:space='preserve'><value>助成金</value><comment>FundingInfoFormVM.cs</comment></data><data name='CommonItem' xml:space='preserve'><value>共通項目</value><comment>Group.cs</comment></data><data name='Group' xml:space='preserve'><value>グループ</value><comment>Group.cs</comment></data><data name='StudyPoint' xml:space='preserve'><value>調査時点</value><comment>GroupFormView.xaml</comment></data><data name='Questionnaire' xml:space='preserve'><value>調査票</value><comment>GroupFormView.xaml</comment></data><data name='TargetPerson' xml:space='preserve'><value>対象者</value><comment>GroupFormView.xaml</comment></data><data name='Geography' xml:space='preserve'><value>地理</value><comment>GroupFormView.xaml</comment></data><data name='DataSet' xml:space='preserve'><value>データセット</value><comment>GroupFormView.xaml</comment></data><data name='Language' xml:space='preserve'><value>言語</value><comment>GroupFormView.xaml</comment></data><data name='GroupPurpose' xml:space='preserve'><value>グループの目的</value><comment>GroupFormView.xaml</comment></data><data name='StudyInGroup' xml:space='preserve'><value>グループに含まれる調査</value><comment>GroupFormView.xaml</comment></data><data name='StudyRelation' xml:space='preserve'><value>研究の関連性</value><comment>GroupFormView.xaml</comment></data><data name='Branch' xml:space='preserve'><value>分岐</value><comment>IfThenElseVM.cs</comment></data><data name='SelectImportLocation' xml:space='preserve'><value>インポートする箇所の選択</value><comment>ImportOptionWindow.xaml</comment></data><data name='Cancel' xml:space='preserve'><value>キャンセル</value><comment>ImportOptionWindow.xaml</comment></data><data name='CreateNew' xml:space='preserve'><value>新規作成</value><comment>MainWindow.xaml</comment></data><data name='CreateNewStudyUnit' xml:space='preserve'><value>新規調査ファイル作成</value><comment>MainWindow.xaml</comment></data><data name='AddNewStudyUnit' xml:space='preserve'><value>新規調査ファイル追加</value><comment>MainWindow.xaml</comment></data><data name='AddNewGroup' xml:space='preserve'><value>新規グループ追加</value><comment>MainWindow.xaml</comment></data><data name='Open' xml:space='preserve'><value>開く</value><comment>MainWindow.xaml</comment></data><data name='SaveAs' xml:space='preserve'><value>名前をつけて保存</value><comment>MainWindow.xaml</comment></data><data name='RecentUsedDocuments' xml:space='preserve'><value>最近使用したドキュメント</value><comment>MainWindow.xaml</comment></data><data name='EDOOption' xml:space='preserve'><value>EDOのオプション</value><comment>MainWindow.xaml</comment></data><data name='EDOExit' xml:space='preserve'><value>EDOの終了</value><comment>MainWindow.xaml</comment></data><data name='Home' xml:space='preserve'><value>ホーム</value><comment>MainWindow.xaml</comment></data><data name='Undo' xml:space='preserve'><value>元に戻す</value><comment>MainWindow.xaml</comment></data><data name='Redo' xml:space='preserve'><value>やり直し</value><comment>MainWindow.xaml</comment></data><data name='StudyUnitFile' xml:space='preserve'><value>調査ファイル</value><comment>MainWindow.xaml</comment></data><data name='AddToGroup' xml:space='preserve'><value>グループに追加</value><comment>MainWindow.xaml</comment></data><data name='DeleteFromGroup' xml:space='preserve'><value>グループから外す</value><comment>MainWindow.xaml</comment></data><data name='Export' xml:space='preserve'><value>エクスポート</value><comment>MainWindow.xaml</comment></data><data name='AllGroupDDI3' xml:space='preserve'><value>グループ全体DDI3</value><comment>MainWindow.xaml</comment></data><data name='StudyUnitDDI3' xml:space='preserve'><value>調査ファイルDDI3</value><comment>MainWindow.xaml</comment></data><data name='Syntax' xml:space='preserve'><value>シンタックス</value><comment>MainWindow.xaml</comment></data><data name='Operation' xml:space='preserve'><value>操作</value><comment>MainWindow.xaml</comment></data><data name='CreateCategoryScheme' xml:space='preserve'><value>選択肢群を作成</value><comment>MainWindow.xaml</comment></data><data name='CreateCodeScheme' xml:space='preserve'><value>コード群を作成</value><comment>MainWindow.xaml</comment></data><data name='AddFromCategoryScheme' xml:space='preserve'><value>選択肢群から追加</value><comment>MainWindow.xaml</comment></data><data name='AddFromCategory' xml:space='preserve'><value>選択肢から追加</value><comment>MainWindow.xaml</comment></data><data name='AddDataSet' xml:space='preserve'><value>データセット追加</value><comment>MainWindow.xaml</comment></data><data name='SaveChanges' xml:space='preserve'><value>変更内容を保存しますか?</value><comment>MainWindowVM.cs</comment></data><data name='CloneSelectedStudyUnit' xml:space='preserve'><value>選択された調査ファイルを複製して追加</value><comment>MainWindowVM.cs</comment></data><data name='CloneAndAdd' xml:space='preserve'><value>{0}を複製して追加</value><comment>MainWindowVM.cs</comment></data><data name='Member' xml:space='preserve'><value>メンバー</value><comment>MemberFormVM.cs</comment></data><data name='StudyIndivisual' xml:space='preserve'><value>調査に関わった個人</value><comment>MemberFormView.xaml</comment></data><data name='StudyOrganization' xml:space='preserve'><value>調査に関わった組織</value><comment>MemberFormView.xaml</comment></data><data name='OrganizationName' xml:space='preserve'><value>組織名</value><comment>MemberFormView.xaml</comment></data><data name='Role' xml:space='preserve'><value>役割</value><comment>MemberFormView.xaml</comment></data><data name='LastName' xml:space='preserve'><value>姓</value><comment>MemberFormView.xaml</comment></data><data name='FirstName' xml:space='preserve'><value>名</value><comment>MemberFormView.xaml</comment></data><data name='AffiliationOrganizationName' xml:space='preserve'><value>所属機関の名前</value><comment>MemberFormView.xaml</comment></data><data name='PositionAndRank' xml:space='preserve'><value>職位</value><comment>MemberFormView.xaml</comment></data><data name='EventManagement' xml:space='preserve'><value>イベント管理</value><comment>MenuElem.cs</comment></data><data name='StudyPlan' xml:space='preserve'><value>調査の企画</value><comment>MenuElem.cs</comment></data><data name='StudyRange' xml:space='preserve'><value>調査の範囲</value><comment>MenuElem.cs</comment></data><data name='QuestionDesign' xml:space='preserve'><value>設問設計</value><comment>MenuElem.cs</comment></data><data name='VariableConcept' xml:space='preserve'><value>扱いたい変数のイメージ</value><comment>MenuElem.cs</comment></data><data name='QuestionItemDesign' xml:space='preserve'><value>質問項目の設計</value><comment>MenuElem.cs</comment></data><data name='Category' xml:space='preserve'><value>選択肢</value><comment>MenuElem.cs</comment></data><data name='Code' xml:space='preserve'><value>コード</value><comment>MenuElem.cs</comment></data><data name='Sequence' xml:space='preserve'><value>順序</value><comment>MenuElem.cs</comment></data><data name='VariableManagement' xml:space='preserve'><value>変数の管理</value><comment>MenuElem.cs</comment></data><data name='VariableInfo' xml:space='preserve'><value>変数情報</value><comment>MenuElem.cs</comment></data><data name='DataManagement' xml:space='preserve'><value>データの管理</value><comment>MenuElem.cs</comment></data><data name='DataSetDefinition' xml:space='preserve'><value>データセットの定義</value><comment>MenuElem.cs</comment></data><data name='DataFileDefinition' xml:space='preserve'><value>データファイルの定義</value><comment>MenuElem.cs</comment></data><data name='GroupManagement' xml:space='preserve'><value>グループ管理</value><comment>MenuElem.cs</comment></data><data name='DetailItem' xml:space='preserve'><value>詳細項目</value><comment>MenuElem.cs</comment></data><data name='CompareMajorDivision' xml:space='preserve'><value>大分類で比較</value><comment>MenuElem.cs</comment></data><data name='CompareMinorDivision' xml:space='preserve'><value>小分類で比較</value><comment>MenuElem.cs</comment></data><data name='CompareVariable' xml:space='preserve'><value>変数で比較</value><comment>MenuElem.cs</comment></data><data name='QuestionnaireFileFilter' xml:space='preserve'><value>調査票ファイル (*.docx)|*.docx</value><comment>MiscSerializer.cs</comment></data><data name='SelectOrder' xml:space='preserve'><value>順序の選択</value><comment>MiscSerializer.cs</comment></data><data name='ExportQuestionnair' xml:space='preserve'><value>調査票のエクスポート</value><comment>MiscSerializer.cs</comment></data><data name='CodeBookFileFilter' xml:space='preserve'><value>コードブックファイル (*.docx)|*.docx</value><comment>MiscSerializer.cs</comment></data><data name='ExportCodebook' xml:space='preserve'><value>コードブックのエクスポート</value><comment>MiscSerializer.cs</comment></data><data name='SPSSFileFilter' xml:space='preserve'><value>SPSSファイル (*.sav)|*.sav</value><comment>MiscSerializer.cs</comment></data><data name='SetupSyntaxFileFilter' xml:space='preserve'><value>セットアップシンタックスファイル (*.sps)|*.sps</value><comment>MiscSerializer.cs</comment></data><data name='SelectDataFile' xml:space='preserve'><value>データファイルの選択</value><comment>MiscSerializer.cs</comment></data><data name='ExportSetupSyntax' xml:space='preserve'><value>セットアップシンタックスのエクスポート</value><comment>MiscSerializer.cs</comment></data><data name='SelectResponse' xml:space='preserve'><value>回答の選択</value><comment>QuestionFormVM.cs</comment></data><data name='QuestionSentence' xml:space='preserve'><value>質問文</value><comment>QuestionFormView.xaml</comment></data><data name='ResponseMethod' xml:space='preserve'><value>回答方法</value><comment>QuestionFormView.xaml</comment></data><data name='ResponseName' xml:space='preserve'><value>回答方法名</value><comment>QuestionFormView.xaml</comment></data><data name='F2AndDoubleClick' xml:space='preserve'><value>F2/ダブルクリック</value><comment>Resources.xaml</comment></data><data name='StartEdit' xml:space='preserve'><value>編集開始</value><comment>Resources.xaml</comment></data><data name='CancelEdit' xml:space='preserve'><value>取消</value><comment>Resources.xaml</comment></data><data name='Confirm' xml:space='preserve'><value>確定</value><comment>Resources.xaml</comment></data><data name='DateType' xml:space='preserve'><value>日付・時刻の型</value><comment>Resources.xaml</comment></data><data name='MinCharacterCount' xml:space='preserve'><value>文字数の下限</value><comment>Resources.xaml</comment></data><data name='MaxCharacterCount' xml:space='preserve'><value>文字数の上限</value><comment>Resources.xaml</comment></data><data name='NumberType' xml:space='preserve'><value>数値の型</value><comment>Resources.xaml</comment></data><data name='MinNumber' xml:space='preserve'><value>数値の下限</value><comment>Resources.xaml</comment></data><data name='MaxNumber' xml:space='preserve'><value>数値の上限</value><comment>Resources.xaml</comment></data><data name='ResponseMethodOfQuestion' xml:space='preserve'><value>質問の回答方法</value><comment>Resources.xaml</comment></data><data name='Add' xml:space='preserve'><value>追加</value><comment>Resources.xaml</comment></data><data name='SelectRegisteredResponse' xml:space='preserve'><value>登録した回答方法から選ぶ</value><comment>Resources.xaml</comment></data><data name='CodeNumber' xml:space='preserve'><value>コード番号</value><comment>Resources.xaml</comment></data><data name='BranchSentence' xml:space='preserve'><value>選択肢の文章</value><comment>Resources.xaml</comment></data><data name='UntitledResponse' xml:space='preserve'><value>無題の回答方法</value><comment>ResponseVM.cs</comment></data><data name='InputResponseName' xml:space='preserve'><value>回答方法名を入力してください</value><comment>ResponseVM.cs</comment></data><data name='Question' xml:space='preserve'><value>質問</value><comment>ResponseVM.cs</comment></data><data name='Variable' xml:space='preserve'><value>変数</value><comment>ResponseVM.cs</comment></data><data name='TypeDetail' xml:space='preserve'><value>型の詳細</value><comment>ResponseVM.cs</comment></data><data name='Possession' xml:space='preserve'><value>の</value><comment>ResponseVM.cs</comment></data><data name='InvalidCategoryCode' xml:space='preserve'><value>選択肢のコードが見つかりません</value><comment>ResponseVM.cs</comment></data><data name='DataCollectionDay' xml:space='preserve'><value>データ収集日・期間</value><comment>SamplingFormView.xaml</comment></data><data name='DataCollectionMethod' xml:space='preserve'><value>データ収集方法</value><comment>SamplingFormView.xaml</comment></data><data name='DataCollectionSituation' xml:space='preserve'><value>データ収集時の状況</value><comment>SamplingFormView.xaml</comment></data><data name='SelectStudyMember' xml:space='preserve'><value>調査メンバーから選ぶ</value><comment>SamplingFormView.xaml</comment></data><data name='Main' xml:space='preserve'><value>主</value><comment>SamplingFormView.xaml</comment></data><data name='DataCollection' xml:space='preserve'><value>データ収集</value><comment>SamplingFormView.xaml</comment></data><data name='DataCollectionLeader' xml:space='preserve'><value>データ収集の責任者</value><comment>SamplingFormView.xaml</comment></data><data name='AffiliationOrganization' xml:space='preserve'><value>所属機関</value><comment>SamplingFormView.xaml</comment></data><data name='SearchCategoryScheme' xml:space='preserve'><value>選択肢群の検索</value><comment>SelectCategorySchemeWindow.xaml</comment></data><data name='SearchCategory' xml:space='preserve'><value>選択肢の検索</value><comment>SelectCategoryWindow.xaml</comment></data><data name='SelectMember' xml:space='preserve'><value>メンバーの選択</value><comment>SelectMemberWindow.xaml</comment></data><data name='Select' xml:space='preserve'><value>選択</value><comment>SelectObjectWindow.xaml</comment></data><data name='SearchResponse' xml:space='preserve'><value>回答の検索</value><comment>SelectResponseWindow.xaml</comment></data><data name='SelectStudy' xml:space='preserve'><value>調査の選択</value><comment>SelectStudyUnitWindow.xaml</comment></data><data name='ImportFrom' xml:space='preserve'><value>インポート元</value><comment>SelectStudyUnitWindow.xaml</comment></data><data name='ImportTo' xml:space='preserve'><value>インポート先</value><comment>SelectStudyUnitWindow.xaml</comment></data><data name='ImportLocation' xml:space='preserve'><value>インポート箇所</value><comment>SelectStudyUnitWindow.xaml</comment></data><data name='Import' xml:space='preserve'><value>インポート</value><comment>SelectStudyUnitWindow.xaml</comment></data><data name='SearchVariable' xml:space='preserve'><value>変数の検索</value><comment>SelectVariableWindow.xaml</comment></data><data name='SequenceName' xml:space='preserve'><value>順序名</value><comment>SequenceFormView.xaml</comment></data><data name='AddQuestion' xml:space='preserve'><value>質問追加</value><comment>SequenceFormView.xaml</comment></data><data name='AddSentence' xml:space='preserve'><value>説明文追加</value><comment>SequenceFormView.xaml</comment></data><data name='AddBranch' xml:space='preserve'><value>分岐追加</value><comment>SequenceFormView.xaml</comment></data><data name='Kind' xml:space='preserve'><value>種類</value><comment>SequenceFormView.xaml</comment></data><data name='Number' xml:space='preserve'><value>番号</value><comment>SequenceFormView.xaml</comment></data><data name='QuestionAndSentence' xml:space='preserve'><value>質問文/説明文</value><comment>SequenceFormView.xaml</comment></data><data name='VariableIsNotFound' xml:space='preserve'><value>変数が見つかりません。</value><comment>SetupSyntaxWriter.cs</comment></data><data name='MissingValue' xml:space='preserve'><value>欠損値</value><comment>SpssReader.cs</comment></data><data name='ImportVariable' xml:space='preserve'><value>インポートした変数</value><comment>SpssReader.cs</comment></data><data name='ImportVariableFrom' xml:space='preserve'><value>{0}からインポートした変数</value><comment>SpssReader.cs</comment></data><data name='Sentence' xml:space='preserve'><value>説明文</value><comment>StatementVM.cs</comment></data><data name='AllDataSet' xml:space='preserve'><value>変数全体のデータセットです</value><comment>StudyUnit.cs</comment></data><data name='CorrespondingImage' xml:space='preserve'><value>対応するイメージ</value><comment>VariableFormView.xaml</comment></data><data name='CorrespondingQuestionItem' xml:space='preserve'><value>対応する質問項目</value><comment>VariableFormView.xaml</comment></data><data name='CorrespondingUniverse' xml:space='preserve'><value>対応する母集団</value><comment>VariableFormView.xaml</comment></data><data name='VariableType' xml:space='preserve'><value>変数の型</value><comment>VariableFormView.xaml</comment></data><data name='StringIsNotSpecified' xml:space='preserve'><value>文字列が指定されていません</value><comment>InputDialog.xaml.cs</comment></data><data name='IsNotSelected' xml:space='preserve'><value>選択されていません</value><comment>SelectObjectWindow.xaml.cs</comment></data><data name='List' xml:space='preserve'><value>一覧</value><comment>CompareFormView.xaml.cs</comment></data><data name='InvalidItem' xml:space='preserve'><value>{0}が不正です</value><comment>CreateBranchWindow.xaml.cs</comment></data><data name='DeleteConditionGroup' xml:space='preserve'><value>条件グループを削除</value><comment>CreateBranchWindow.xaml</comment></data><data name='ConfirmRestart' xml:space='preserve'><value>再起動してよろしいですか?</value><comment>MainWindowVM.cs</comment></data><data name='SamplingTitle' xml:space='preserve'><value>収集方法</value><comment>SamplingFormVM.cs</comment></data><data name='ChangeImage' xml:space='preserve'><value>イメージ変更</value><comment>QuestionFormView.xaml</comment></data><data name='PleaseSelectQuestion' xml:space='preserve'><value>質問を選択してください</value><comment>DDI3Writer.cs</comment></data><data name='Space' xml:space='preserve'><value>　</value><comment>QuestionnaireWriter.cs</comment></data><data name='JapaneseEraTSH' xml:space='preserve'><value>大正・昭和・平成</value><comment>QuestionnaireWriter.cs</comment></data><data name='WesternEra' xml:space='preserve'><value>西暦</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordYear' xml:space='preserve'><value>年</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordMonth' xml:space='preserve'><value>月</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordDay' xml:space='preserve'><value>日</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordHour' xml:space='preserve'><value>時</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordMinute' xml:space='preserve'><value>分</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordMidMark' xml:space='preserve'><value>─</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordStartMark' xml:space='preserve'><value>├</value><comment>QuestionnaireWriter.cs</comment></data><data name='WordEndMark' xml:space='preserve'><value>┤</value><comment>QuestionnaireWriter.cs</comment></data><data name='QuestionGroup' xml:space='preserve'><value>質問グループ</value><comment>MenuElem.cs</comment></data><data name='BookList' xml:space='preserve'><value>文献一覧</value><comment>MenuElem.cs</comment></data><data name='SelectBook' xml:space='preserve'><value>文献の選択</value><comment>BookFormVM.cs</comment></data><data name='AddBook' xml:space='preserve'><value>文献追加</value><comment>BookFormView.xaml</comment></data><data name='EditBook' xml:space='preserve'><value>文献編集</value><comment>BookFormView.xaml</comment></data><data name='DeleteBook' xml:space='preserve'><value>文献削除</value><comment>BookFormView.xaml</comment></data><data name='Author' xml:space='preserve'><value>著者</value><comment>BookFormView.xaml</comment></data><data name='Title' xml:space='preserve'><value>タイトル</value><comment>BookFormView.xaml</comment></data><data name='AnnouncementDate' xml:space='preserve'><value>発表日</value><comment>BookFormView.xaml</comment></data><data name='RelatedMetaData' xml:space='preserve'><value>関連するメタデータ</value><comment>BookFormView.xaml</comment></data><data name='ConfigQuestion' xml:space='preserve'><value>質問項目の設定</value><comment>BookRelationItem.cs</comment></data><data name='Case' xml:space='preserve'><value>件</value><comment>BookVM.cs</comment></data><data name='Type' xml:space='preserve'><value>タイプ</value><comment>EditBookWindow.xaml</comment></data><data name='Item' xml:space='preserve'><value>項目</value><comment>EditBookWindow.xaml</comment></data><data name='Name' xml:space='preserve'><value>名前</value><comment>EditBookWindow.xaml</comment></data><data name='Editor' xml:space='preserve'><value>編者</value><comment>EditBookWindowVM.cs</comment></data><data name='StartPage' xml:space='preserve'><value>開始ページ</value><comment>EditBookWindowVM.cs</comment></data><data name='EndPage' xml:space='preserve'><value>終了ページ</value><comment>EditBookWindowVM.cs</comment></data><data name='Publisher' xml:space='preserve'><value>出版者</value><comment>EditBookWindowVM.cs</comment></data><data name='City' xml:space='preserve'><value>都市</value><comment>EditBookWindowVM.cs</comment></data><data name='BookName' xml:space='preserve'><value>書籍名</value><comment>EditBookWindowVM.cs</comment></data><data name='MagazineName' xml:space='preserve'><value>雑誌名</value><comment>EditBookWindowVM.cs</comment></data><data name='Volume' xml:space='preserve'><value>巻</value><comment>EditBookWindowVM.cs</comment></data><data name='BookNumber' xml:space='preserve'><value>号</value><comment>EditBookWindowVM.cs</comment></data><data name='Chapter' xml:space='preserve'><value>章</value><comment>EditBookWindowVM.cs</comment></data><data name='UniversityName' xml:space='preserve'><value>大学名</value><comment>EditBookWindowVM.cs</comment></data><data name='DepartmentName' xml:space='preserve'><value>学部・専攻名</value><comment>EditBookWindowVM.cs</comment></data><data name='Summary' xml:space='preserve'><value>概要</value><comment>EditBookWindowVM.cs</comment></data><data name='InputTitle' xml:space='preserve'><value>タイトルを入力してください</value><comment>EditBookWindowVM.cs</comment></data><data name='SelectMetaData' xml:space='preserve'><value>メタデータの選択</value><comment>SelectMetaDataWindow.xaml</comment></data><data name='ConfirmRemoveFromQuestionGroup' xml:space='preserve'><value>質問グループから外れますがよろしいですか?</value><comment>StudyUnitVM.cs</comment></data><data name='Confirmation' xml:space='preserve'><value>確認</value><comment>StudyUnitVM.cs</comment></data><data name='StudyUnitDDI' xml:space='preserve'><value>調査ファイルDDI</value><comment>MainWindow.xaml</comment></data><data name='AddQuestionGroup' xml:space='preserve'><value>質問グループ追加</value><comment>MainWindow.xaml</comment></data><data name='RelatedBook' xml:space='preserve'><value>関連文献</value><comment>ConceptFormView.xaml</comment></data><data name='SelectImage' xml:space='preserve'><value>イメージの選択</value><comment>QuestionFormVM.cs</comment></data><data name='InputQuestionGroupName' xml:space='preserve'><value>質問グループの名前を入力してください</value><comment>QuestionGroupFormVM.cs</comment></data><data name='ResponseAreaLayout' xml:space='preserve'><value>回答欄のレイアウト</value><comment>QuestionGroupFormView.xaml</comment></data><data name='ChoicesDirection' xml:space='preserve'><value>選択肢の方向</value><comment>QuestionGroupFormView.xaml</comment></data><data name='RowDirection' xml:space='preserve'><value>行方向</value><comment>QuestionGroupFormView.xaml</comment></data><data name='ColumnDirection' xml:space='preserve'><value>列方向</value><comment>QuestionGroupFormView.xaml</comment></data><data name='OutputChoicesText' xml:space='preserve'><value>選択肢の文章の出力</value><comment>QuestionGroupFormView.xaml</comment></data><data name='Head' xml:space='preserve'><value>頭</value><comment>QuestionGroupFormView.xaml</comment></data><data name='EachCell' xml:space='preserve'><value>各セル</value><comment>QuestionGroupFormView.xaml</comment></data><data name='EmptyQuestionGroup' xml:space='preserve'><value>無題の質問グループ</value><comment>QuestionGroupVM.cs</comment></data><data name='Preview' xml:space='preserve'><value>プレビュー</value><comment>ChartWindow.xaml</comment></data><data name='Close' xml:space='preserve'><value>閉じる</value><comment>ChartWindow.xaml</comment></data><data name='AlreadySelectedQuestionGroup' xml:space='preserve'><value>選択済みの質問グループです</value><comment>ControlConstructSchemeVM.cs</comment></data><data name='SelectQuestionGroup' xml:space='preserve'><value>質問グループの選択</value><comment>ControlConstructSchemeVM.cs</comment></data><data name='SelectFromExistBook' xml:space='preserve'><value>登録した文献から選ぶ</value><comment>Resources.xaml</comment></data><data name='ExcludeToQuestionnaire' xml:space='preserve'><value>調査票に出力しない</value><comment>Resources.xaml</comment></data><data name='ResponseAreaLayoutEtc' xml:space='preserve'><value>回答欄のレイアウト等</value><comment>Resources.xaml</comment></data><data name='MeasurementMethod' xml:space='preserve'><value>測定法</value><comment>Resources.xaml</comment></data><data name='SingleResponse' xml:space='preserve'><value>単一回答</value><comment>Resources.xaml</comment></data><data name='MultipleResponse' xml:space='preserve'><value>多重回答</value><comment>Resources.xaml</comment></data><data name='MaxResponseCount' xml:space='preserve'><value>最大可能選択数</value><comment>Resources.xaml</comment></data><data name='SDMethod' xml:space='preserve'><value>意味微分法(SD法)</value><comment>Resources.xaml</comment></data><data name='SurroundChoices' xml:space='preserve'><value>選択肢を囲む</value><comment>Resources.xaml</comment></data><data name='ChoicesOrder' xml:space='preserve'><value>選択肢の並び順</value><comment>Resources.xaml</comment></data><data name='Vertical' xml:space='preserve'><value>縦</value><comment>Resources.xaml</comment></data><data name='Horizontal' xml:space='preserve'><value>横</value><comment>Resources.xaml</comment></data><data name='ColumnCount' xml:space='preserve'><value>列数</value><comment>Resources.xaml</comment></data><data name='ConfigMissingValue' xml:space='preserve'><value>欠損値の設定</value><comment>Resources.xaml</comment></data><data name='CalendarEra' xml:space='preserve'><value>紀年法</value><comment>Resources.xaml</comment></data><data name='JapaneseEra' xml:space='preserve'><value>和暦</value><comment>Resources.xaml</comment></data><data name='Nothing' xml:space='preserve'><value>なし</value><comment>Resources.xaml</comment></data><data name='Underline' xml:space='preserve'><value>アンダーライン</value><comment>Resources.xaml</comment></data><data name='Textbox' xml:space='preserve'><value>テキストボックス</value><comment>Resources.xaml</comment></data><data name='Box' xml:space='preserve'><value>マス</value><comment>Resources.xaml</comment></data><data name='RowCount' xml:space='preserve'><value>行数</value><comment>Resources.xaml</comment></data><data name='WriteNumber' xml:space='preserve'><value>数値を記入</value><comment>Resources.xaml</comment></data><data name='Unit' xml:space='preserve'><value>単位</value><comment>Resources.xaml</comment></data><data name='WordBothEnd' xml:space='preserve'><value>両端の文言</value><comment>Resources.xaml</comment></data><data name='LineLength' xml:space='preserve'><value>線の長さ(cm)</value><comment>Resources.xaml</comment></data><data name='Total' xml:space='preserve'><value>合計</value><comment>CodebookWriter.cs</comment></data></root>

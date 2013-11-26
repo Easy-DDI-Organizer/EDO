@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3273D6ED-2AC5-4A69-81AD-9DFD87A8D1CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDO</RootNamespace>
+    <AssemblyName>EDO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Icon\edo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B4634D719F6BDFB8EFE9186172D7A4EA4E242301</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EDO_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Open XML SDK\V2.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RibbonControlsLibrary" />
+    <Reference Include="Microsoft.Windows.Shell" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Core\IO\CodebookWriter.cs" />
+    <Compile Include="Core\IO\CompareItem.cs" />
+    <Compile Include="Core\IO\DDI2ImportOption.cs" />
+    <Compile Include="Core\IO\DDI2IO.cs" />
+    <Compile Include="Core\IO\DDI2Reader.cs" />
+    <Compile Include="Core\IO\DDI2Writer.cs" />
+    <Compile Include="Core\IO\DDIImportOption.cs" />
+    <Compile Include="Core\IO\DDIIO.cs" />
+    <Compile Include="Core\IO\DDI3IO.cs" />
+    <Compile Include="Core\IO\DDI3Reader.cs" />
+    <Compile Include="Core\IO\DDISerializer.cs" />
+    <Compile Include="Core\IO\DDIUtils.cs" />
+    <Compile Include="Core\IO\DDI3Writer.cs" />
+    <Compile Include="Core\IO\DocxWriter.cs" />
+    <Compile Include="Core\IO\EDOSerializer.cs" />
+    <Compile Include="Core\IO\FileDialogResult.cs" />
+    <Compile Include="Core\IO\DDI3ImportOption.cs" />
+    <Compile Include="Core\IO\IOUtils.cs" />
+    <Compile Include="Core\IO\MiscSerializer.cs" />
+    <Compile Include="Core\IO\QuestionnaireWriter.cs" />
+    <Compile Include="Core\IO\SetupSyntaxWriter.cs" />
+    <Compile Include="Core\IO\SpssReader.cs" />
+    <Compile Include="Core\Model\Abstract.cs" />
+    <Compile Include="Core\Model\Book.cs" />
+    <Compile Include="Core\Model\BookRelation.cs" />
+    <Compile Include="Core\Model\Category.cs" />
+    <Compile Include="Core\Model\CategoryScheme.cs" />
+    <Compile Include="Core\Model\CheckOption.cs" />
+    <Compile Include="Core\Model\Code.cs" />
+    <Compile Include="Core\Model\CodeScheme.cs" />
+    <Compile Include="Core\Model\Compare.cs" />
+    <Compile Include="Core\Model\CompareCell.cs" />
+    <Compile Include="Core\Model\CompareColumn.cs" />
+    <Compile Include="Core\Model\CompareRow.cs" />
+    <Compile Include="Core\Model\CompareTable.cs" />
+    <Compile Include="Core\Model\Concept.cs" />
+    <Compile Include="Core\Model\ConceptScheme.cs" />
+    <Compile Include="Core\Model\ControlConstructScheme.cs" />
+    <Compile Include="Core\Model\Coverage.cs" />
+    <Compile Include="Core\Model\DataFile.cs" />
+    <Compile Include="Core\Model\DataSet.cs" />
+    <Compile Include="Core\Model\DateUnit.cs" />
+    <Compile Include="Core\Model\EDOConfig.cs" />
+    <Compile Include="Core\Model\EDOConstants.cs" />
+    <Compile Include="Core\Model\ElseIf.cs" />
+    <Compile Include="Core\Model\EDOEnums.cs" />
+    <Compile Include="Core\Model\Event.cs" />
+    <Compile Include="Core\Model\EDOModel.cs" />
+    <Compile Include="Core\Model\FundingInfo.cs" />
+    <Compile Include="Core\Model\Group.cs" />
+    <Compile Include="Core\Model\GroupId.cs" />
+    <Compile Include="Core\Model\GuidOption.cs" />
+    <Compile Include="Core\Model\IConstruct.cs" />
+    <Compile Include="Core\Model\IfCondition.cs" />
+    <Compile Include="Core\Model\IFile.cs" />
+    <Compile Include="Core\Model\IfThenElse.cs" />
+    <Compile Include="Core\Model\IIDPropertiesProvider.cs" />
+    <Compile Include="Core\Model\IStringIDProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Model\Keyword.cs" />
+    <Compile Include="Core\Model\Layout\UnknownLayout.cs" />
+    <Compile Include="Core\Model\QuestionGroupConstruct.cs" />
+    <Compile Include="Core\Model\ResponseLayout.cs" />
+    <Compile Include="Core\Model\Layout\ChoicesLayout.cs" />
+    <Compile Include="Core\Model\Layout\DateTimeLayout.cs" />
+    <Compile Include="Core\Model\Layout\FreeLayout.cs" />
+    <Compile Include="Core\Model\Layout\NumericLayout.cs" />
+    <Compile Include="Core\Model\Member.cs" />
+    <Compile Include="Core\Model\MenuElem.cs" />
+    <Compile Include="Core\Model\MissingValue.cs" />
+    <Compile Include="Core\Model\Option.cs" />
+    <Compile Include="Core\Model\Options.cs" />
+    <Compile Include="Core\Model\Organization.cs" />
+    <Compile Include="Core\Model\Question.cs" />
+    <Compile Include="Core\Model\QuestionConstruct.cs" />
+    <Compile Include="Core\Model\QuestionGroup.cs" />
+    <Compile Include="Core\Model\Response.cs" />
+    <Compile Include="Core\Model\Sampling.cs" />
+    <Compile Include="Core\Model\Sequence.cs" />
+    <Compile Include="Core\Model\Statement.cs" />
+    <Compile Include="Core\Model\StudyUnit.cs" />
+    <Compile Include="Core\Model\Universe.cs" />
+    <Compile Include="Core\Model\Variable.cs" />
+    <Compile Include="Core\Model\VariableScheme.cs" />
+    <Compile Include="Core\Util\CollectionExtender.cs" />
+    <Compile Include="Core\Util\CommandList.cs" />
+    <Compile Include="Core\Util\DateParser.cs" />
+    <Compile Include="Core\Util\IDUtils.cs" />
+    <Compile Include="Core\Util\ModelSyncher.cs" />
+    <Compile Include="Core\Util\DeepCopyUtils.cs" />
+    <Compile Include="Core\Util\EDOUtils.cs" />
+    <Compile Include="Core\Util\PropertyPathHelper.cs" />
+    <Compile Include="Core\Util\RecentFileList.cs" />
+    <Compile Include="Core\Util\RelayCommand.cs" />
+    <Compile Include="Core\Util\UndoManager.cs" />
+    <Compile Include="Core\Util\UndoInfo.cs" />
+    <Compile Include="Core\Util\UndoTransaction.cs" />
+    <Compile Include="Core\ViewModel\BaseVM.cs" />
+    <Compile Include="Core\ViewModel\CheckMenuItemVM.cs" />
+    <Compile Include="Core\ViewModel\CheckOptionVM.cs" />
+    <Compile Include="Core\ViewModel\EDOException.cs" />
+    <Compile Include="Core\ViewModel\ITitleProvider.cs" />
+    <Compile Include="Core\ViewModel\WriteError.cs" />
+    <Compile Include="Core\ViewModel\FormVM.cs" />
+    <Compile Include="Core\ViewModel\IOError.cs" />
+    <Compile Include="Core\ViewModel\IOrderedObject.cs" />
+    <Compile Include="Core\ViewModel\ISelectableObject.cs" />
+    <Compile Include="Core\ViewModel\ISelectObjectWindowVM.cs" />
+    <Compile Include="Core\ViewModel\IStatefullVM.cs" />
+    <Compile Include="Core\ViewModel\IStudyUnitVMProvider.cs" />
+    <Compile Include="Core\View\BooleanToVisibilityConverterEx.cs" />
+    <Compile Include="Core\View\CustomDataGridTemplateColumn.cs" />
+    <Compile Include="Core\View\DataGridEx.cs" />
+    <Compile Include="Core\View\DataGridHelper.cs" />
+    <Compile Include="Core\View\DataGridRollbackOnUnfocusedBehaviour.cs" />
+    <Compile Include="Core\View\DateRangeConverter.cs" />
+    <Compile Include="Core\Model\IValidatableCollection.cs" />
+    <Compile Include="Core\View\DateRangePicker2.xaml.cs">
+      <DependentUpon>DateRangePicker2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\View\EnumBooleanConverter.cs" />
+    <Compile Include="Core\View\ExpandedToGridLengthConverter.cs" />
+    <Compile Include="Core\View\FormView.cs" />
+    <Compile Include="Core\View\ErrorDialog.xaml.cs">
+      <DependentUpon>ErrorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\View\ErrorDialogVM.cs" />
+    <Compile Include="Core\View\ErrorInfoVM.cs" />
+    <Compile Include="Core\View\ImportOptionWindow.xaml.cs">
+      <DependentUpon>ImportOptionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\View\ImportOptionWindowVM.cs" />
+    <Compile Include="Core\View\InputDialog.xaml.cs">
+      <DependentUpon>InputDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Model\IValidatable.cs" />
+    <Compile Include="Core\View\DecimalValueConverter.cs" />
+    <Compile Include="Core\View\ObjectBooleanConverter.cs" />
+    <Compile Include="Core\View\RoundedCornersPolygon.cs" />
+    <Compile Include="Core\View\RowDataInfoValidationRule.cs" />
+    <Compile Include="Core\View\SelectObjectWindow.xaml.cs">
+      <DependentUpon>SelectObjectWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\View\SelectObjectWindowVM.cs" />
+    <Compile Include="Core\View\SelectStudyUnitWindow.xaml.cs">
+      <DependentUpon>SelectStudyUnitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\View\SelectStudyUnitWindowVM.cs" />
+    <Compile Include="Core\View\TextBoxHelper.cs" />
+    <Compile Include="Core\View\Validator.cs" />
+    <Compile Include="Core\View\VMState.cs" />
+    <Compile Include="Core\View\VisualTreeFinder.cs" />
+    <Compile Include="Core\Util\ApplicationDetails.cs" />
+    <Compile Include="Core\View\DataGridRollbackOnDataContextChangedBehaviour.cs" />
+    <Compile Include="DataCategory\BookForm\BookFieldVM.cs" />
+    <Compile Include="DataCategory\BookForm\BookFormView.xaml.cs">
+      <DependentUpon>BookFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory\BookForm\BookFormVM.cs" />
+    <Compile Include="DataCategory\BookForm\BookRelationItem.cs" />
+    <Compile Include="DataCategory\BookForm\BookRelationVM.cs" />
+    <Compile Include="DataCategory\BookForm\BookVM.cs" />
+    <Compile Include="DataCategory\BookForm\EditBookWindow.xaml.cs">
+      <DependentUpon>EditBookWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory\BookForm\EditBookWindowVM.cs" />
+    <Compile Include="DataCategory\BookForm\SelectMetaDataWindow.xaml.cs">
+      <DependentUpon>SelectMetaDataWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory\BookForm\SelectMetaDataWindowVM.cs" />
+    <Compile Include="DataCategory\DataFileForm\DataFileFormView.xaml.cs">
+      <DependentUpon>DataFileFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory\DataFileForm\DataFileFormVM.cs" />
+    <Compile Include="DataCategory\DataFileForm\DataFileVM.cs" />
+    <Compile Include="DataCategory\DataSetForm\DataSetFormView.xaml.cs">
+      <DependentUpon>DataSetFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory\DataSetForm\DataSetFormVM.cs" />
+    <Compile Include="DataCategory\DataSetForm\DataSetVariableVM.cs" />
+    <Compile Include="DataCategory\DataSetForm\DataSetVM.cs" />
+    <Compile Include="DataCategory\DataSetForm\SelectVariableWindow.xaml.cs">
+      <DependentUpon>SelectVariableWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCategory\DataSetForm\SelectVariableWindowVM.cs" />
+    <Compile Include="EDOResourceDictionary.cs" />
+    <Compile Include="EventCategory\EventForm\EventFormView.xaml.cs">
+      <DependentUpon>EventFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventCategory\EventForm\EventFormVM.cs" />
+    <Compile Include="EventCategory\EventForm\EventVM.cs" />
+    <Compile Include="GroupCategory\CompareForm\CompareItemVM.cs" />
+    <Compile Include="GroupCategory\CompareForm\CompareFormView.xaml.cs">
+      <DependentUpon>CompareFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupCategory\CompareForm\CompareFormVM.cs" />
+    <Compile Include="GroupCategory\CompareForm\CompareRowVM.cs" />
+    <Compile Include="GroupCategory\CompareForm\DiffOption.cs" />
+    <Compile Include="GroupCategory\GroupForm\GroupFormView.xaml.cs">
+      <DependentUpon>GroupFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupCategory\GroupForm\GroupFormVM.cs" />
+    <Compile Include="MainWindowVM.cs" />
+    <Compile Include="Main\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main\AboutWindowVM.cs" />
+    <Compile Include="Main\ConfigWindow.xaml.cs">
+      <DependentUpon>ConfigWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ConfigWindowVM.cs" />
+    <Compile Include="Main\EDOUnitVM.cs" />
+    <Compile Include="Main\GroupVM.cs" />
+    <Compile Include="Main\StudyUnitVM.cs" />
+    <Compile Include="QuestionCategory\CategoryForm\CategoryFormView.xaml.cs">
+      <DependentUpon>CategoryFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\CategoryForm\CategoryFormVM.cs" />
+    <Compile Include="QuestionCategory\CategoryForm\CategorySchemeVM.cs" />
+    <Compile Include="QuestionCategory\CategoryForm\CategoryVM.cs" />
+    <Compile Include="QuestionCategory\CodeForm\CodeFormView.xaml.cs">
+      <DependentUpon>CodeFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\CodeForm\CodeFormVM.cs" />
+    <Compile Include="QuestionCategory\CodeForm\CodeSchemeVM.cs" />
+    <Compile Include="QuestionCategory\CodeForm\CodeVM.cs" />
+    <Compile Include="QuestionCategory\CodeForm\SelectCategorySchemeWindow.xaml.cs">
+      <DependentUpon>SelectCategorySchemeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\CodeForm\SelectCategorySchemeWindowVM.cs" />
+    <Compile Include="QuestionCategory\CodeForm\SelectCategoryWindow.xaml.cs">
+      <DependentUpon>SelectCategoryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\CodeForm\SelectCategoryWindowVM.cs" />
+    <Compile Include="QuestionCategory\ConceptForm\ConceptSchemeVM.cs" />
+    <Compile Include="QuestionCategory\ConceptForm\ConceptVM.cs" />
+    <Compile Include="QuestionCategory\ConceptForm\ConceptFormView.xaml.cs">
+      <DependentUpon>ConceptFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\ConceptForm\ConceptFormVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\ChoicesLayoutVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\ConceptConverter.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\DateTimeLayoutVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\FreeLayoutVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\MissingValueVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\NumericLayoutVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\QuestionFormView.xaml.cs">
+      <DependentUpon>QuestionFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\QuestionForm\QuestionFormVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\QuestionVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\ResponseLayoutVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\ResponseVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\SelectResponseWindow.xaml.cs">
+      <DependentUpon>SelectResponseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\QuestionForm\SelectResponseWindowVM.cs" />
+    <Compile Include="QuestionCategory\QuestionForm\UnknownLayoutVM.cs" />
+    <Compile Include="QuestionCategory\QuestionGroupForm\QuestionGroupFormView.xaml.cs">
+      <DependentUpon>QuestionGroupFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\QuestionGroupForm\QuestionGroupFormVM.cs" />
+    <Compile Include="QuestionCategory\QuestionGroupForm\QuestionGroupVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\BranchVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\ArrowShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\BranchShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\ChartShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\ChartWindow.xaml.cs">
+      <DependentUpon>ChartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\SequenceForm\Chart\ChartWindowVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\CondInfo.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\CondShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\NodeInfo.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\QuestionGroupShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\QuestionShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\Chart\StatementShape.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\CondParser.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\CondVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\ConstructUtils.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\ConstructVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\ControlConstructSchemeVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\CreateBranchWindow.xaml.cs">
+      <DependentUpon>CreateBranchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\SequenceForm\CreateBranchWindowVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\CreateSentenceWindow.xaml.cs">
+      <DependentUpon>CreateSentenceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\SequenceForm\CreateSentenceWindowVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\CondGroupVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\IBranchEditor.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\IfThenElseVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\QuestionConstructVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\QuestionGroupConstructVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\SequenceFormView.xaml.cs">
+      <DependentUpon>SequenceFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionCategory\SequenceForm\SequenceFormVM.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\SequenceUtils.cs" />
+    <Compile Include="QuestionCategory\SequenceForm\StatementVM.cs" />
+    <Compile Include="SamplingCategory\SamplingForm\SamplingFormView.xaml.cs">
+      <DependentUpon>SamplingFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SamplingCategory\SamplingForm\SamplingFormVM.cs" />
+    <Compile Include="SamplingCategory\SamplingForm\SamplingVM.cs" />
+    <Compile Include="SamplingCategory\SamplingForm\SelectMemberWindow.xaml.cs">
+      <DependentUpon>SelectMemberWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SamplingCategory\SamplingForm\SelectMemberWindowVM.cs" />
+    <Compile Include="SamplingCategory\SamplingForm\UniverseVM.cs" />
+    <Compile Include="StudyCategory\AbstractForm\AbstractFormVM.cs" />
+    <Compile Include="StudyCategory\CoverageForm\CheckBoxTemplateSelector.cs" />
+    <Compile Include="StudyCategory\CoverageForm\CoverageFormView.xaml.cs">
+      <DependentUpon>CoverageFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudyCategory\CoverageForm\CoverageFormVM.cs" />
+    <Compile Include="StudyCategory\CoverageForm\KeywordVM.cs" />
+    <Compile Include="StudyCategory\FundingInfoForm\FundingInfoVM.cs" />
+    <Compile Include="StudyCategory\FundingInfoForm\FundingInfoFomView.xaml.cs">
+      <DependentUpon>FundingInfoFomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudyCategory\FundingInfoForm\FundingInfoFormVM.cs" />
+    <Compile Include="StudyCategory\MemberForm\MemberFormView.xaml.cs">
+      <DependentUpon>MemberFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudyCategory\MemberForm\MemberVM.cs" />
+    <Compile Include="StudyCategory\MemberForm\MemberFormVM.cs" />
+    <Compile Include="StudyCategory\MemberForm\OrganizationVM.cs" />
+    <Compile Include="StudyCategory\AbstractForm\AbstractFormView.xaml.cs">
+      <DependentUpon>AbstractFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VariableCategory\VariableForm\VariableFormView.xaml.cs">
+      <DependentUpon>VariableFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VariableCategory\VariableForm\VariableFormVM.cs" />
+    <Compile Include="VariableCategory\VariableForm\VariableVM.cs" />
+    <Page Include="Core\View\DateRangePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Core\View\DateRangePicker2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\View\ErrorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\View\ImportOptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\View\InputDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\View\SelectObjectWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Core\View\SelectStudyUnitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCategory\BookForm\BookFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCategory\BookForm\EditBookWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCategory\BookForm\SelectMetaDataWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCategory\DataFileForm\DataFileFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCategory\DataSetForm\DataSetFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataCategory\DataSetForm\SelectVariableWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormWindowResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventCategory\EventForm\EventFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupCategory\CompareForm\CompareFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupCategory\GroupForm\GroupFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\View\DateRangePicker.xaml.cs">
+      <DependentUpon>DateRangePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Model\DateRange.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Main\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main\ConfigWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Main\MenuFormView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="QuestionCategory\CategoryForm\CategoryFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\CodeForm\CodeFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\CodeForm\SelectCategorySchemeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\CodeForm\SelectCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\ConceptForm\ConceptFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\QuestionForm\QuestionFormView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="QuestionCategory\QuestionForm\SelectResponseWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="QuestionCategory\QuestionGroupForm\QuestionGroupFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\SequenceForm\Chart\ChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\SequenceForm\CreateBranchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\SequenceForm\CreateSentenceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuestionCategory\SequenceForm\SequenceFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SamplingCategory\SamplingForm\SamplingFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SamplingCategory\SamplingForm\SelectMemberWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudyCategory\AbstractForm\AbstractFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudyCategory\CoverageForm\CoverageFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudyCategory\FundingInfoForm\FundingInfoFomView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudyCategory\MemberForm\MemberFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VariableCategory\VariableForm\VariableFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources_ja.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main\MenuItemVM.cs" />
+    <Compile Include="Main\MenuFormView.xaml.cs">
+      <DependentUpon>MenuFormView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icon\edo_old.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white_copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\save_as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\door_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\page_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\page_white_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icon\edo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Etc\about.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\document_copies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\page_white_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\arrow_rotate_anticlockwise.png" />
+    <Resource Include="Images\Large\arrow_rotate_clockwise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\arrow_redo.png" />
+    <Resource Include="Images\Large\arrow_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\arrow_redo.png" />
+    <Resource Include="Images\Small\arrow_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Files\options.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Files\options.en.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpssLib\SpssLib.csproj">
+      <Project>{A1736F6F-1A98-48E5-BB4B-377703A53AA5}</Project>
+      <Name>SpssLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFLocalization\WPFLocalization.csproj">
+      <Project>{447B98DC-3053-488B-8BB0-21BDC4F27456}</Project>
+      <Name>WPFLocalization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\door_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\document_copies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white_get.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\page_white_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\data_table.png" />
+    <Resource Include="Images\Large\page_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Small\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Large\layout_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources_en.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

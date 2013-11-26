@@ -1,0 +1,67 @@
+﻿<view:FormView x:Class="EDO.QuestionCategory.CodeForm.CodeFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Style="{StaticResource UserControlStyle}"
+             xmlns:view="clr-namespace:EDO.Core.View"
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding CodeSchemes}" SelectedItem="{Binding SelectedCodeScheme, Mode=TwoWay}" DisplayMemberPath="Title" IsSynchronizedWithCurrentItem="True">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="{Loc Delete}" Command="{Binding RemoveCodeSchemeCommand}"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>            
+        </ListBox>
+        <GridSplitter HorizontalAlignment="Stretch"  Grid.Column="1" Grid.Row="0"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextRowStyle}" Text="{Loc DisplayName}"></TextBlock>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SelectedCodeScheme.Title, ValidatesOnDataErrors=True}" Style="{StaticResource GridRowStyle}" Tag="Undoable"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource TextRowStyle}" Text="{Loc Memo}"></TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding SelectedCodeScheme.Memo, ValidatesOnDataErrors=True}" Style="{StaticResource GridRowStyle}" Tag="Undoable"></TextBox>
+            <GridSplitter HorizontalAlignment="Stretch" Grid.Row="2" Grid.ColumnSpan="3"/>
+            <DataGrid Name="codeDataGrid" Grid.Row="3" Grid.ColumnSpan="3" ItemsSource="{Binding SelectedCodeScheme.Codes}" AutoGenerateColumns="False" CanUserAddRows="False"
+                      IsSynchronizedWithCurrentItem="True" SelectedItem="{Binding SelectedCodeScheme.SelectedCodeItem}">
+                <!--
+                      view:DataGridRollbackOnUnfocusedBehaviour.DataGridRollbackOnUnfocused="True"   
+                -->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{Loc Code}" Width="100" Binding="{Binding Value}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="{Loc Label}" Width="*" Binding="{Binding Label}" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridCheckBoxColumn Header="{Loc Key=MissingValue}" Binding="{Binding IsMissingValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <DataGridCheckBoxColumn.ElementStyle>
+                            <Style TargetType="CheckBox">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridCheckBoxColumn.ElementStyle>
+                    </DataGridCheckBoxColumn>
+                </DataGrid.Columns>
+                <DataGrid.RowValidationRules>
+                    <view:RowDataInfoValidationRule ValidationStep="UpdatedValue"/>
+                </DataGrid.RowValidationRules>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="{Loc Delete}" Command="{Binding RemoveCodeCommand}"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</view:FormView>

@@ -1,0 +1,77 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:main="clr-namespace:EDO.Main"
+                    xmlns:datafile="clr-namespace:EDO.DataCategory.DataFileForm"
+                    xmlns:dataset="clr-namespace:EDO.DataCategory.DataSetForm"
+                    xmlns:event="clr-namespace:EDO.EventCategory.EventForm"
+                    xmlns:category="clr-namespace:EDO.QuestionCategory.CategoryForm"                    
+                    xmlns:code="clr-namespace:EDO.QuestionCategory.CodeForm"                    
+                    xmlns:concept="clr-namespace:EDO.QuestionCategory.ConceptForm"             
+                    xmlns:question="clr-namespace:EDO.QuestionCategory.QuestionForm"
+                    xmlns:sequence="clr-namespace:EDO.QuestionCategory.SequenceForm"
+                    xmlns:questiongroup="clr-namespace:EDO.QuestionCategory.QuestionGroupForm"
+                    xmlns:sampling="clr-namespace:EDO.SamplingCategory.SamplingForm"                    
+                    xmlns:abstract="clr-namespace:EDO.StudyCategory.AbstractForm"                    
+                    xmlns:coverage="clr-namespace:EDO.StudyCategory.CoverageForm"                    
+                    xmlns:fundinginfo="clr-namespace:EDO.StudyCategory.FundingInfoForm"                    
+                    xmlns:member="clr-namespace:EDO.StudyCategory.MemberForm"                    
+                    xmlns:variable="clr-namespace:EDO.VariableCategory.VariableForm"   
+                    xmlns:group="clr-namespace:EDO.GroupCategory.GroupForm"
+                    xmlns:compare="clr-namespace:EDO.GroupCategory.CompareForm"
+                    xmlns:book="clr-namespace:EDO.DataCategory.BookForm"
+                    >
+    <DataTemplate DataType="{x:Type datafile:DataFileFormVM}">
+        <datafile:DataFileFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type dataset:DataSetFormVM}">
+        <dataset:DataSetFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type event:EventFormVM}">
+        <event:EventFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type category:CategoryFormVM}">
+        <category:CategoryFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type code:CodeFormVM}">
+        <code:CodeFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type concept:ConceptFormVM}">
+        <concept:ConceptFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type question:QuestionFormVM}">
+        <question:QuestionFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type sequence:SequenceFormVM}">
+        <sequence:SequenceFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type questiongroup:QuestionGroupFormVM}">
+        <questiongroup:QuestionGroupFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type sampling:SamplingFormVM}">
+        <sampling:SamplingFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type abstract:AbstractFormVM}">
+        <abstract:AbstractFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type coverage:CoverageFormVM}">
+        <coverage:CoverageFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type fundinginfo:FundingInfoFormVM}">
+        <fundinginfo:FundingInfoFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type member:MemberFormVM}">
+        <member:MemberFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type variable:VariableFormVM}">
+        <variable:VariableFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type group:GroupFormVM}">
+        <group:GroupFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type compare:CompareFormVM}">
+        <compare:CompareFormView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type book:BookFormVM}">
+        <book:BookFormView/>
+    </DataTemplate>
+</ResourceDictionary>

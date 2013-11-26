@@ -1,0 +1,86 @@
+﻿<view:FormView x:Class="EDO.QuestionCategory.QuestionForm.QuestionFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:EDO.Core.View"
+             xmlns:local="clr-namespace:EDO.QuestionCategory.QuestionForm"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700" Style="{StaticResource UserControlStyle}"
+             >
+    <UserControl.Resources>
+        <local:ConceptConverter x:Key="conceptConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Concepts}" SelectedItem="{Binding SelectedConcept, Mode=TwoWay}" DisplayMemberPath="Title" IsSynchronizedWithCurrentItem="True">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="{Loc Delete}" Command="{Binding RemoveConceptCommand}"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+        <GridSplitter HorizontalAlignment="Stretch"  Grid.Column="1" Grid.Row="0"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="{Binding SelectedConcept, Mode=TwoWay, Converter={StaticResource conceptConverter}}" Style="{StaticResource TopHeaderStyle}"></TextBlock>
+            <DataGrid  Grid.Row="1" Name="questionDataGrid" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext.SelectedQuestions}" 
+                          AutoGenerateColumns="False" 
+                          IsSynchronizedWithCurrentItem="True" 
+                          SelectedItem="{Binding SelectedQuestionItem}"          
+                          >
+                <!--
+                          view:DataGridRollbackOnDataContextChangedBehaviour.DataGridRollbackOnDataContextChanged="True"                                         
+                          view:DataGridRollbackOnUnfocusedBehaviour.DataGridRollbackOnUnfocused="True"                          
+                -->
+                <DataGrid.RowValidationRules>
+                    <view:RowDataInfoValidationRule ValidationStep="UpdatedValue"/>
+                </DataGrid.RowValidationRules>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="{Loc Delete}" Command="{Binding RemoveQuestionCommand}"/>
+                        <MenuItem Header="{Loc ChangeImage}" Command="{Binding ChangeImageCommand}"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="100" Header="{Loc DisplayName}" Binding="{Binding Title}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="200"  Header="{Loc QuestionSentence}" Binding="{Binding Text}"></DataGridTextColumn>
+                    <DataGridComboBoxColumn Width="100"  Header="{Loc ResponseMethod}">
+                        <DataGridComboBoxColumn.ElementStyle>
+                            <Style TargetType="ComboBox">
+                                <Setter Property="ItemsSource" Value="{Binding Path=ResponseTypes}"/>
+                                <Setter Property="DisplayMemberPath" Value="Label"/>
+                                <Setter Property="SelectedValuePath" Value="Code"/>
+                                <Setter Property="SelectedValue" Value="{Binding Response.TypeCode, UpdateSourceTrigger=PropertyChanged}"/>
+                                <Setter Property="SelectedValuePath" Value="Code"/>
+                                <Setter Property="IsReadOnly" Value="True"/>
+                            </Style>
+                        </DataGridComboBoxColumn.ElementStyle>
+                        <DataGridComboBoxColumn.EditingElementStyle>
+                            <Style TargetType="ComboBox">
+                                <Setter Property="ItemsSource" Value="{Binding Path=ResponseTypes}"/>
+                                <Setter Property="DisplayMemberPath" Value="Label"/>
+                                <Setter Property="SelectedValuePath" Value="Code"/>
+                                <Setter Property="SelectedValue" Value="{Binding Response.TypeCode, UpdateSourceTrigger=PropertyChanged}"/>
+                                <EventSetter Event="SelectionChanged" Handler="combo_ResponseTypeChanged" />
+                            </Style>
+                        </DataGridComboBoxColumn.EditingElementStyle>
+                    </DataGridComboBoxColumn>
+                    <DataGridTextColumn Width="*"  Header="{Loc ResponseName}" Binding="{Binding ResponseTitle}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch"/>
+            <ContentControl Grid.Row="3" Name="responsePane" Content="{Binding SelectedQuestionItem.Response}">
+            </ContentControl>
+        </Grid>
+    </Grid>
+</view:FormView>

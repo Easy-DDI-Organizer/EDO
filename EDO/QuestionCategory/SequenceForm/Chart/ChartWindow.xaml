@@ -1,0 +1,20 @@
+﻿<Window x:Class="EDO.QuestionCategory.SequenceForm.Chart.ChartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Loc Key=Preview}" Height="800" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Header="{Binding Title}">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <Canvas Name="canvas" VerticalAlignment="Top">
+                </Canvas>
+            </ScrollViewer>
+        </GroupBox>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Width="80" Margin="4,10,4,4" IsDefault="True" Click="okButton_Clicked" Content="{Loc Key=Close}"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

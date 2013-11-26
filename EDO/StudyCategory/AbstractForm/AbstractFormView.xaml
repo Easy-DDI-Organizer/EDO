@@ -1,0 +1,33 @@
+﻿<view:FormView x:Class="EDO.StudyCategory.AbstractForm.AbstractFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:EDO.Core.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="478" d:DesignWidth="692" Style="{StaticResource UserControlStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="{Binding IsExpanded, Converter={StaticResource expandedToGridLengthConverter}}"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Style="{StaticResource TopHeaderStyle}" Text="{Loc StudyTitle}"></TextBlock>
+        <TextBox Grid.Row="1" Text="{Binding Title, ValidatesOnDataErrors=True}" Style="{StaticResource SingleLineTextBox}" Tag="Undoable"></TextBox>
+        <TextBlock Grid.Row="2" Style="{StaticResource TopHeaderStyle}" Text="{Loc StudyPurpose}"></TextBlock>
+        <TextBox Grid.Row="3" Text="{Binding Purpose, ValidatesOnDataErrors=True}" Style="{StaticResource MultiLineTextBox}" Tag="Undoable"></TextBox>
+        <GridSplitter Grid.Row="4" HorizontalAlignment="Stretch" />
+        <TextBlock Grid.Row="5" Style="{StaticResource TopHeaderStyle}" Text="{Loc StudyAbstract}"></TextBlock>
+        <TextBox Grid.Row="6" Text="{Binding Summary, ValidatesOnDataErrors=True}" Style="{StaticResource MultiLineTextBox}" Tag="Undoable"></TextBox>
+        <GridSplitter Grid.Row="7" HorizontalAlignment="Stretch" />
+        <Expander Grid.Row="8" Header="{Loc Key=RelatedBook}" Name="expander" IsExpanded="{Binding IsExpanded}">
+            <ContentControl Template="{StaticResource BookTemplate}"/>
+        </Expander>        
+    </Grid>
+</view:FormView>

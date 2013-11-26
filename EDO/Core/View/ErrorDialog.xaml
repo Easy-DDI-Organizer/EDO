@@ -1,0 +1,24 @@
+﻿<Window x:Class="EDO.Core.View.ErrorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Loc ErrorOccurred}" Height="300" Width="480" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>      
+        <DataGrid Name="dataGrid" Grid.ColumnSpan="2" Margin="6" ItemsSource="{Binding ErrorInfos}" 
+                  CanUserAddRows="False" AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedErrorInfo}">            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{Loc StudyUnit}" Binding="{Binding UnitTitle}" Width="100"/>
+                <DataGridTextColumn Header="{Loc Display}" Binding="{Binding MenuTitle}" Width="100"/>
+                <DataGridTextColumn Header="{Loc ErrorMessage}" Binding="{Binding Message}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" Grid.Column="1" Width="80" Margin="6" IsDefault="True" Click="ok_Clicked">OK</Button>
+    </Grid>
+</Window>

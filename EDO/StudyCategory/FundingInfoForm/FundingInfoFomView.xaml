@@ -1,0 +1,38 @@
+﻿<view:FormView x:Class="EDO.StudyCategory.FundingInfoForm.FundingInfoFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EDO.StudyCategory.FundingInfoForm"
+             xmlns:view="clr-namespace:EDO.Core.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="408" d:DesignWidth="562" Style="{StaticResource UserControlStyle}"
+             >
+    <UserControl.Resources>
+        <DataTemplate x:Key="fundingInfo" DataType="{x:Type local:FundingInfoVM}">
+            <StackPanel>
+                <TextBlock Text="{Loc Key= FundOrganization}" Style="{StaticResource TopHeaderStyle}"/>
+                <TextBox  Width="100" HorizontalAlignment="Left" Text="{Binding OrganizationName, ValidatesOnDataErrors=True}" Tag="Undoable"/>
+                <TextBlock Text="{Loc Key= FundTitle}"  Style="{StaticResource TopHeaderStyle}"/>
+                <TextBox Name="titleTextBox" Width="300" HorizontalAlignment="Left" Text="{Binding Title, ValidatesOnDataErrors=True}" Tag="Undoable"/>
+                <TextBlock Text="{Loc Key= FundMoneyValue}"  Style="{StaticResource TopHeaderStyle}"  Tag="Undoable"/>
+                <TextBox Width="100" HorizontalAlignment="Left"  Text="{Binding Money, ValidatesOnDataErrors=True, Converter={StaticResource decimalValueConverter}}" Tag="Undoable"/>
+                <TextBlock Text="{Loc Key= FundNumber}"  Style="{StaticResource TopHeaderStyle}"/>
+                <TextBox Width="100" HorizontalAlignment="Left" Text="{Binding Number, ValidatesOnDataErrors=True}" Tag="Undoable"/>
+                <TextBlock Text="{Loc Key= FundPeriod}"  Style="{StaticResource TopHeaderStyle}"/>
+                <view:DateRangePicker2 DateRange="{Binding DateRange, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>        
+    <Grid>
+        <TabControl Name="tabControl" VerticalAlignment="Stretch" ItemsSource="{Binding FundingInfos}" IsSynchronizedWithCurrentItem="True" Style="{StaticResource TabControlStyle}" Template="{StaticResource TabControlTemplate}" ContentTemplate="{StaticResource fundingInfo}"
+                    SelectedItem="{Binding SelectedItem}"
+                    >
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+        </TabControl>
+    </Grid>
+</view:FormView>

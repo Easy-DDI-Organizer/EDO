@@ -1,0 +1,83 @@
+﻿<view:FormView x:Class="EDO.StudyCategory.CoverageForm.CoverageFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:EDO.Core.View"  
+             xmlns:local="clr-namespace:EDO.StudyCategory.CoverageForm"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="700" Style="{StaticResource UserControlStyle}"
+             >
+    <UserControl.Resources>
+        <DataTemplate x:Key="NormalTemplate">
+            <CheckBox Width="250" Content="{Binding Label}" IsChecked="{Binding IsChecked}" Margin="4,2,2,4"/>
+        </DataTemplate>
+        <DataTemplate x:Key="MemoTemplate">
+            <StackPanel Width="250" Orientation="Horizontal">
+                <CheckBox Content="{Binding Label}" IsChecked="{Binding IsChecked}"  Margin="4,2,2,4"/>
+                <TextBox Text="{Binding Memo, UpdateSourceTrigger=LostFocus, ValidatesOnDataErrors=True}" Width="100" Margin="2,0,2,0" Tag="Undoable"/>
+            </StackPanel>
+        </DataTemplate>
+        <local:CheckBoxTemplateSelector x:Key="CheckBoxTemplateSelector" NormalTemplate="{StaticResource NormalTemplate}" MemoTemplate="{StaticResource MemoTemplate}"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="{Loc StudyTopic}" Style="{StaticResource GroupBoxStyle}">
+            <ItemsControl ItemsSource="{Binding Topics}" ItemTemplateSelector="{StaticResource CheckBoxTemplateSelector}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Width="520" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </GroupBox>
+        <GroupBox Grid.Row="0" Grid.Column="1" Header="{Loc StudyKeyword}" Style="{StaticResource GroupBoxStyle}">
+            <DataGrid Name="keywordDataGrid" ItemsSource="{Binding Keywords}" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto" Height="180"
+                  IsSynchronizedWithCurrentItem="True"
+                  SelectedItem="{Binding SelectedKeywordItem}"
+                      >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{Loc Keyword}" Width="*" Binding="{Binding Content}"/>                    
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="{Loc Delete}" Command="{Binding RemoveKeywordCommand}"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.RowValidationRules>
+                    <view:RowDataInfoValidationRule ValidationStep="UpdatedValue"/>
+                </DataGrid.RowValidationRules>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Header="{Loc CoveragePeriod}" Style="{StaticResource GroupBoxStyle}">
+            <StackPanel>
+                <view:DateRangePicker2 DateRange="{Binding DateRange, Mode=TwoWay, ValidatesOnDataErrors=True}"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Grid.Column="0" Header="{Loc CoverageArea}" Style="{StaticResource GroupBoxStyle}">
+            <GroupBox.Resources>
+                <Style TargetType="{x:Type CheckBox}">
+                    <Setter Property="Margin" Value="4,2,2,4" />
+                </Style>
+            </GroupBox.Resources>       
+            <ItemsControl ItemsSource="{Binding Areas}" ItemTemplate="{StaticResource NormalTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Width="170" HorizontalAlignment="Left"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>                
+            </ItemsControl>
+        </GroupBox>
+        <GroupBox Grid.Row="2" Grid.Column="1" Header="{Loc Memo}" Style="{StaticResource GroupBoxStyle}">
+            <TextBox Style="{StaticResource MultiLineTextBox}" Text="{Binding Memo, ValidatesOnDataErrors=True}" Tag="Undoable"></TextBox>
+        </GroupBox>
+    </Grid>
+</view:FormView>

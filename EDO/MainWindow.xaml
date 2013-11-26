@@ -1,0 +1,321 @@
+﻿<ribbon:RibbonWindow x:Class="EDO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        xmlns:main="clr-namespace:EDO.Main"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="{Binding Title}"
+        x:Name="RibbonWindow"
+        Background="{StaticResource EDOBackground}"
+        Width="1100" Height="730" Icon="Images\Icon\edo.ico" Loaded="Window_Loaded" Closing="Window_Closing" 
+                   
+                     >
+    <ribbon:RibbonWindow.Resources>
+
+        <!--
+        <Style TargetType="{x:Type ribbon:RibbonButton}">
+            <Setter Property="FontFamily" Value="Courier New" />
+        </Style>
+        -->
+    </ribbon:RibbonWindow.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ribbon:Ribbon x:Name="Ribbon" Grid.ColumnSpan="3" SelectionChanged="Ribbon_SelectionChanged">
+            <ribbon:Ribbon.HelpPaneContent>
+                <ribbon:RibbonButton Name="Help" SmallImageSource="{StaticResource SmallHelpIcon}" Command="{Binding HelpCommand}"/>
+            </ribbon:Ribbon.HelpPaneContent>
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu SmallImageSource="{StaticResource SmallFileMenuIcon}" KeyTip="F">
+                    <ribbon:RibbonApplicationMenuItem Header="{Loc CreateNew}" ImageSource="{StaticResource LargeNewIcon}" Command="{Binding CreateStudyUnitCommand}">
+                        <ribbon:RibbonApplicationMenuItem Header="{Loc CreateNewStudyUnit}"  ImageSource="{StaticResource LargeNewStudyUnitIcon}" Command="{Binding CreateStudyUnitCommand}"/>
+                        <ribbon:RibbonApplicationMenuItem Header="{Loc AddNewStudyUnit}" ImageSource="{StaticResource LargeAddStudyUnitIcon}" Command="{Binding AddEmptyStudyUnitCommand}"/>
+                        <ribbon:RibbonApplicationMenuItem Header="{Binding CloneStudyUnitCommandTitle}" ImageSource="{StaticResource LargeAddStudyUnitIcon}" Command="{Binding CloneStudyUnitCommand}"/>
+                        <ribbon:RibbonApplicationMenuItem Header="{Loc AddNewGroup}" ImageSource="{StaticResource LargeAddGroupIcon}" Command="{Binding AddGroupCommand}"/>
+                    </ribbon:RibbonApplicationMenuItem>
+                    <!--
+                    <ribbon:RibbonApplicationMenuItem Header="test" Command="{Binding TestCommand}"/>
+                    -->
+                    <ribbon:RibbonApplicationMenuItem Header="{Loc Open}" ImageSource="{StaticResource LargeOpenIcon}" Command="{Binding OpenCommand}"/>
+                    <ribbon:RibbonApplicationMenuItem Header="{Loc Save}" ImageSource="{StaticResource LargeSaveIcon}" Command="{Binding SaveCommand}"/>
+                    <ribbon:RibbonApplicationMenuItem Header="{Loc SaveAs}" ImageSource="{StaticResource LargeSaveAsIcon}" Command="{Binding SaveAsCommand}"/>
+                    <ribbon:RibbonApplicationMenu.AuxiliaryPaneContent>
+                        <ribbon:RibbonGallery CanUserFilter="False"
+                                  ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" SelectedValuePath="Code" SelectedValue="{Binding SelectedFile}">
+                            <ribbon:RibbonGalleryCategory Header="{Loc RecentUsedDocuments}" 
+                                              Background="Transparent" 
+                                              ItemsSource="{Binding RecentFiles}" DisplayMemberPath="Label">
+                                <ribbon:RibbonGalleryCategory.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Vertical" IsItemsHost="True"/>
+                                    </ItemsPanelTemplate>
+                                </ribbon:RibbonGalleryCategory.ItemsPanel>
+                            </ribbon:RibbonGalleryCategory>
+                        </ribbon:RibbonGallery>
+                    </ribbon:RibbonApplicationMenu.AuxiliaryPaneContent>
+                    <ribbon:RibbonApplicationMenu.FooterPaneContent>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ribbon:RibbonButton Grid.Column="1" Label="{Loc EDOOption}" Margin="2" BorderBrush="#B8114EAF" VerticalAlignment="Center" SmallImageSource="{StaticResource SmallConfigIcon}"  Command="{Binding ConfigCommand}"/>
+                            <ribbon:RibbonButton Grid.Column="2" Label="{Loc EDOExit}" Margin="2" BorderBrush="#B8114EAF" SmallImageSource="{StaticResource SmallExitIcon}" Command="{Binding ExitCommand}"/>
+                        </Grid>
+                    </ribbon:RibbonApplicationMenu.FooterPaneContent>
+                </ribbon:RibbonApplicationMenu>
+
+            </ribbon:Ribbon.ApplicationMenu>
+            <ribbon:RibbonTab x:Name="HomeTab" 
+                              Header="{Loc Home}">
+                <ribbon:RibbonGroup x:Name="FileGrup" 
+                                    Header="{Loc File}">
+                    <ribbon:RibbonSplitButton x:Name="newButton"
+                                         LargeImageSource="{StaticResource LargeNewIcon}"
+                                         Label="{Loc CreateNew}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding CreateStudyUnitCommand}"
+                                         >
+                        <ribbon:RibbonMenuItem Header="{Loc CreateNewStudyUnit}" ImageSource="{StaticResource SmallNewStudyUnitIcon}" Command="{Binding CreateStudyUnitCommand}"/>
+                        <ribbon:RibbonMenuItem Header="{Loc AddNewStudyUnit}" ImageSource="{StaticResource SmallAddStudyUnitIcon}" Command="{Binding AddEmptyStudyUnitCommand}"/>
+                        <ribbon:RibbonMenuItem Header="{Binding CloneStudyUnitCommandTitle}" ImageSource="{StaticResource SmallAddStudyUnitIcon}" Command="{Binding CloneStudyUnitCommand}"/>
+                        <ribbon:RibbonMenuItem Header="{Loc AddNewGroup}" ImageSource="{StaticResource SmallAddGroupIcon}" Command="{Binding AddGroupCommand}"/>
+                    </ribbon:RibbonSplitButton>
+                    <ribbon:RibbonButton x:Name="openButton"
+                                         LargeImageSource="{StaticResource LargeOpenIcon}"
+                                         Label="{Loc Open}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding OpenCommand}"                                         
+                                         />
+                    <ribbon:RibbonButton x:Name="saveButton"
+                                         LargeImageSource="{StaticResource LargeSaveIcon}"
+                                         Label="{Loc Save}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding SaveCommand}"                                                                                  
+                                          />
+                    <ribbon:RibbonButton x:Name="saveAsButton"
+                                         LargeImageSource="{StaticResource LargeSaveAsIcon}"                                         
+                                         Label="{Loc SaveAs}"
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding SaveAsCommand}"                                                                                  
+                                         />
+                    <ribbon:RibbonButton x:Name="undoButton"
+                                         LargeImageSource="{StaticResource LargeUndoIcon}"                                         
+                                         Label="{Loc Undo}"
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding UndoCommand}"                                                                                  
+                                         />
+                    <ribbon:RibbonButton x:Name="redoButton"
+                                         LargeImageSource="{StaticResource LargeRedoIcon}"                                         
+                                         Label="{Loc Redo}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding RedoCommand}"                                                                                  
+                                         />
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup x:Name="StudyUnitFileGroup" 
+                                    Header="{Loc StudyUnitFile}">
+                    <ribbon:RibbonButton x:Name="addStudyUnitButton"
+                                         LargeImageSource="{StaticResource LargeAddIcon}"
+                                         Label="{Loc AddToGroup}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding AddStudyUnitCommand}"                                         
+                                         />
+                    <ribbon:RibbonButton x:Name="closeStudyUnitButton"
+                                         LargeImageSource="{StaticResource LargeDeleteIcon}"
+                                         Label="{Loc DeleteFromGroup}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding CloseStudyUnitCommand}"                                         
+                                         />
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup x:Name="ExportGroup" 
+                                    Header="{Loc Export}">
+                    <ribbon:RibbonButton x:Name="exportGroupButton"
+                                         LargeImageSource="{StaticResource LargeExportIcon}"
+                                         Label="{Loc AllGroupDDI3}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ExportGroupCommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="exportStudyUnitButton"
+                                         LargeImageSource="{StaticResource LargeExportIcon}"
+                                         Label="{Loc Key=StudyUnitDDI}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ExportStudyUnitCommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="exportQuestionnaireButton"
+                                         LargeImageSource="{StaticResource LargeExportQuestionnaireIcon}"
+                                         Label="{Loc Questionnaire}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ExportQuestionnaireCommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="exportCodebookButton"
+                                         LargeImageSource="{StaticResource LargeExportCodebookIcon}"
+                                         Label="{Loc Codebook}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ExportCodebookCommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="exportSetupSyntaxButton"
+                                         LargeImageSource="{StaticResource LargeExportSetupSyntaxIcon}"
+                                         Label="{Loc Syntax}"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ExportSetupSyntaxCommand}"
+                                         />
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup x:Name="ImportGroup" 
+                                    Header="{Loc Import}">
+                    <ribbon:RibbonButton x:Name="importDDIButton"
+                                         LargeImageSource="{StaticResource LargeImportIcon}"
+                                         Label="DDI"  
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ImportDDICommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="importSpssButton"
+                                         LargeImageSource="{StaticResource LargeImportSpssIcon}"
+                                         Label="SPSS" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding ImportSpssCommand}"
+                                         />
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+            <ribbon:RibbonTab ContextualTabGroupHeader="{Loc Category}" Header="{Loc Category}" IsSelected="{Binding IsCategorySelected}">
+                <ribbon:RibbonGroup x:Name="CategoryActionGroup" Header="{Loc Operation}">
+                    <ribbon:RibbonButton x:Name="addCategoryScheme"
+                                         LargeImageSource="{StaticResource LargeAddIcon}"
+                                         Label="{Loc CreateCategoryScheme}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding AddCategorySchemeCommand}"
+                                         />
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+            <ribbon:RibbonTab ContextualTabGroupHeader="{Loc Code}"  Header="{Loc Code}" IsSelected="{Binding IsCodeSelected}">
+                <ribbon:RibbonGroup x:Name="CodeActionGroup" Header="{Loc Operation}">
+                    <ribbon:RibbonButton x:Name="addCodeScheme"
+                                         LargeImageSource="{StaticResource LargeAddIcon}"
+                                         Label="{Loc CreateCodeScheme}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding AddCodeSchemeCommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="addFromCategoryScheme"
+                                         LargeImageSource="{StaticResource LargeExportIcon}"
+                                         Label="{Loc AddFromCategoryScheme}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding AddFromCategorySchemeCommand}"
+                                         />
+                    <ribbon:RibbonButton x:Name="addFromCategory"
+                                         LargeImageSource="{StaticResource LargeExportIcon}"
+                                         Label="{Loc AddFromCategory}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonWidth}"
+                                         Command="{Binding AddFromCategoryCommand}"
+                                         />
+                </ribbon:RibbonGroup>                
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab ContextualTabGroupHeader="{Loc DataSet}" Header="{Loc DataSet}" IsSelected="{Binding IsDataSetSelected}">
+                <ribbon:RibbonGroup x:Name="DataSetActionGroup" Header="{Loc Operation}">
+                    <ribbon:RibbonButton x:Name="addDataSet"
+                                         LargeImageSource="{StaticResource LargeAddIcon}"
+                                         Label="{Loc AddDataSet}" 
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonLargeWidth}"
+                                         Command="{Binding AddDataSetCommand}"
+                                         />
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab ContextualTabGroupHeader="{Loc Key=QuestionGroup}" Header="{Loc Key=QuestionGroup}" IsSelected="{Binding IsQuestionGroupSelected}">
+                <ribbon:RibbonGroup x:Name="QustionGroupActionGroup" Header="{Loc Operation}">
+                    <ribbon:RibbonButton x:Name="addQuestionGroup"
+                                         LargeImageSource="{StaticResource LargeAddIcon}"
+                                         Label="{Loc Key=AddQuestionGroup}"                                     
+                                         MinWidth="{StaticResource RibbonButtonMinWidth}"
+                                         Width="{StaticResource RibbonButtonLargeWidth}"
+                                         Command="{Binding AddQuestionGroupCommand}"         
+                                     />                    
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+        
+            <ribbon:Ribbon.ContextualTabGroups>
+                <ribbon:RibbonContextualTabGroup Header="{Loc Category}" Visibility="{Binding IsCategory, Converter={StaticResource booleanToVisibilityConverter}}"/>
+                <ribbon:RibbonContextualTabGroup Header="{Loc Code}" Visibility="{Binding IsCode, Converter={StaticResource booleanToVisibilityConverter}}"/>
+                <ribbon:RibbonContextualTabGroup Header="{Loc DataSet}" Visibility="{Binding IsDataSet, Converter={StaticResource booleanToVisibilityConverter}}"/>
+                <ribbon:RibbonContextualTabGroup Header="{Loc Key=QuestionGroup}" Visibility="{Binding IsQuestionGroup, Converter={StaticResource booleanToVisibilityConverter}}"/>
+            </ribbon:Ribbon.ContextualTabGroups>            
+        </ribbon:Ribbon>
+        <Grid Grid.Row="1">
+            <Grid.Resources>
+                <!-- メインのタブコントロールに含まれる内容 -->
+                <DataTemplate x:Key="tabContent" DataType="{x:Type main:EDOUnitVM}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="230" />
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Style="{StaticResource LeftBorderStyle}">
+                            <ContentControl Grid.Column="0" Name="menuPane" Style="{StaticResource LeftPaneStyle}">
+                                <main:MenuFormView></main:MenuFormView>
+                            </ContentControl>
+                        </Border>
+                        <GridSplitter HorizontalAlignment="Stretch" Grid.Column="1" Style="{StaticResource GridSplitterStyle}"/>
+                        <Border Grid.Column="2" Style="{StaticResource RightBorderStyle}">
+                            <!-- 選択されたMenuItemを表示する -->
+                            <ContentControl Name="contentPane" Style="{StaticResource RightPaneStyle}" Content="{Binding SelectedMenuItem.Content}"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </Grid.Resources>
+            <!-- メインのタブコントロール -->
+            <TabControl Name="tabControl" Margin="10" ItemsSource="{Binding EDOUnits}" 
+                        IsSynchronizedWithCurrentItem="True" 
+                        Style="{StaticResource TabControlStyle}" 
+                        ContentTemplate="{StaticResource tabContent}"
+                        SelectedItem="{Binding SelectedItem}"
+                        >
+                <TabControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Title}" Margin="0" Padding="0" ToolTip="{Binding PathName}" />
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+                <!--
+                <TabControl.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="xxx" Margin="0" Padding="0" ToolTip="{Binding PathName}"/>
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+                -->
+            </TabControl>
+        </Grid>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem HorizontalAlignment="Stretch">
+                <TextBlock Text="{Binding StatusMessage}" Style="{StaticResource StatusMessageStyle}">
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Separator />
+            </StatusBarItem>
+        </StatusBar>
+
+    </Grid>
+</ribbon:RibbonWindow>
