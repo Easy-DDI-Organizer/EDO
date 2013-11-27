@@ -24,7 +24,8 @@ Original Licenses are applied to each library/ icon.
 * Libraries
   - [SPSS & PSPP file library](http://spsslib.codeplex.com/) \(MIT License\)
   - [Simple WPF Localization](http://www.codeproject.com/Articles/30035/Simple-WPF-Localization) (Code Project Open License)
-
+  - [DDI 3.1 XML Schema](http://www.ddialliance.org/Specification/DDI-Lifecycle/3.1/) (GNU Lesser General Public License version 3 or later)
+  - [DDI 2.5 XML Schema](http://www.ddialliance.org/Specification/DDI-Codebook/2.5/) (GNU Lesser General Public License version 3 or later)
 
 * Icons
   - [Farm-Fresh Web Icons](http://www.fatcow.com/free-icons)(Creative Commons Attribution 3.0 License)
