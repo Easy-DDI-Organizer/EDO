@@ -1,5 +1,5 @@
 #Easy DDI Organizer
-[“ú–{Œê](./readme_ja.md)
+[æ—¥æœ¬èªž]readme_ja.md)
 
 Easy DDI Organizer\(EDO\) is an application for survey planning and metadata management. EDO enables you to plan social surveys as well as prepare metadata about the survey compliant to Data Documentation Initiative \(DDI\). You can export various documents used in your survey \(e.g. questionnaire, codebook\).
 
