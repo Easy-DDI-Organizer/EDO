@@ -6,6 +6,7 @@ Easy DDI Organizer\(EDO\) is an application for survey planning and metadata man
 
 ##System Requirement
 OS: Windows XP / Windows Vista / Windows 7 \(recommended)
+
 .Net Framework: .NET Framework 4\(full\)
 
 You need to install libraries below before building the EDO project.
