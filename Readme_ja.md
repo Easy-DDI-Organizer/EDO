@@ -3,6 +3,7 @@ Easy DDI Organizer (EDO)は社会調査の計画および社会調査メタデ�
 
 ##システム要件
 OS: Windows XP / Windows Vista / Windows 7(推奨)
+
 .Net Framework: .NET Framework 4\(full)
 
 * ビルドに必要なライブラリ
