@@ -33,3 +33,7 @@ Original Licenses are applied to each library/ icon.
 
 ##Acknowledgement
 This project is funded by Joint usage/ research center project of the Ministry of Education, Culture, Sports, Science and Technology, Japan.
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/02da7b306727caad3019f7501037ed5c "githalytics.com")](http://githalytics.com/Easy-DDI-Organizer/EDO)
+
